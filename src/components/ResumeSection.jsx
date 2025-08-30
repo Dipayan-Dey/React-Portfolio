@@ -114,16 +114,16 @@ const ResumeSection = () => {
                   </div>
 
                   {/* JSON Styled Content */}
-                  <div className="bg-neutral-900/50 border border-neutral-800 rounded-2xl p-8 hover:border-orange-500/30 transition-colors">
+                  <div className="transition-colors">
                     {/* Top bar with circles */}
-                    <div className="flex items-center space-x-2 mb-6">
+                    {/* <div className="flex items-center space-x-2 mb-6">
                       <div className="w-3 h-3 bg-red-500 rounded-full "></div>
                       <div className="w-3 h-3 bg-yellow-500 rounded-full "></div>
                       <div className="w-3 h-3 bg-green-500 rounded-full "></div>
                       <span className="text-neutral-400 ml-4 font-mono text-sm">
                         resume.js
                       </span>
-                    </div>
+                    </div> */}
 
                     {/* Code Content */}
                     <div className="font-mono text-sm space-y-2">

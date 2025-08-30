@@ -76,7 +76,6 @@ import ResumeSection from "./ResumeSection";
 // import CodeIcon from '@mui/icons-material/Code';
 import { FaWhatsapp } from "react-icons/fa";
 
-
 import "../App.css";
 import {
   Mail,
@@ -264,80 +263,56 @@ export default function Hero() {
     },
   ];
 
-  const skills = {
-    programming: [
-      { name: "Python", level: 95, icon: "🐍" },
-      { name: "JavaScript", level: 92, icon: "🟨" },
-      { name: "C++", level: 80, icon: "⚙️" },
-      { name: "SQL", level: 90, icon: "🛢️" },
-      { name: "Java", level: 90, icon: "🛢️" },
-      { name: "C", level: 90, icon: "🛢️" },
-    ],
+const skills = {
+  programming: [
+    { name: "Python", level: 95, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+    { name: "JavaScript", level: 92, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+    { name: "C++", level: 80, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
+    { name: "SQL", level: 90, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+    { name: "Java", level: 90, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+    { name: "C", level: 85, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" }
+  ],
 
-    frontend: [
-      { name: "React", level: 95, icon: "⚛️" },
-      { name: "Tailwind CSS", level: 90, icon: "🎨" },
-      { name: "HTML5", level: 92, icon: "📄" },
-      { name: "CSS3", level: 88, icon: "🎭" },
-    ],
+  frontend: [
+    { name: "React", level: 95, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+    { name: "Tailwind CSS", level: 90, icon: "https://avatars.githubusercontent.com/u/30317862?s=200&v=4" },
+    { name: "HTML5", level: 92, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+    { name: "CSS3", level: 88, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" }
+  ],
 
-    backend: [
-      { name: "Node.js", level: 90, icon: "🟢" },
-      { name: "Express.js", level: 88, icon: "🚀" },
-      { name: "REST APIs", level: 92, icon: "🌐" },
-    ],
+  backend: [
+    { name: "Node.js", level: 90, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+    { name: "Express.js", level: 88, icon: "https://ajeetchaulagain.com/static/7cb4af597964b0911fe71cb2f8148d64/87351/express-js.png" },
+    { name: "REST APIs", level: 92, icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ8pLM2nPCg_c9kGRQfWQgWHgm3sZbwPSsFg&s" }
+  ],
 
-    database: [
-      { name: "MongoDB", level: 88, icon: "🍃" },
-      { name: "MySQL", level: 85, icon: "🐬" },
-      { name: "PostgreSQL", level: 80, icon: "🐘" },
-    ],
+  database: [
+    { name: "MongoDB", level: 88, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+    { name: "MySQL", level: 85, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+    { name: "PostgreSQL", level: 80, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" }
+  ],
 
-    analysis: [
-      { name: "Pandas", level: 95, icon: "🐼" },
-      { name: "NumPy", level: 90, icon: "🔢" },
-      { name: "Matplotlib", level: 88, icon: "📊" },
-      { name: "Seaborn", level: 85, icon: "🌊" },
-      { name: "Excel", level: 90, icon: "📑" },
-      { name: "Power BI", level: 85, icon: "📉" },
-    ],
+  analysis: [
+    { name: "Pandas", level: 95, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" },
+    { name: "NumPy", level: 90, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
+    { name: "Matplotlib", level: 88, icon: "https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg" },
+    { name: "Seaborn", level: 85, icon: "https://seaborn.pydata.org/_static/logo-wide-lightbg.svg" },
+    { name: "Excel", level: 90, icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdPG1TdKVdwV0MhHKMTtvb2ZNvfqkTslKSBw&s" },
+    { name: "Power BI", level: 85, icon: "https://cdn.worldvectorlogo.com/logos/power-bi.svg" }
+  ],
 
-    tools: [
-      { name: "Git", level: 92, icon: "📝" },
-      { name: "Jupyter Notebook", level: 95, icon: "📓" },
-      { name: "VS Code", level: 98, icon: "💙" },
-      { name: "Vercel", level: 88, icon: "▲" },
-      { name: "Figma", level: 80, icon: "🎨" },
-      { name: "Docker", level: 75, icon: "🐳" },
-    ],
-  };
+  tools: [
+    { name: "Git", level: 92, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+    { name: "Jupyter Notebook", level: 95, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" },
+    { name: "VS Code", level: 98, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
+    { name: "Vercel", level: 88, icon: "https://assets.vercel.com/image/upload/v1662130559/front/favicon/vercel/180x180.png" },
+    { name: "Figma", level: 80, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
+    { name: "Docker", level: 75, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" }
+  ]
+};
 
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "Product Manager at TechCorp",
-      content:
-        "Alex delivered exceptional work on our e-commerce platform. His attention to detail and technical expertise exceeded our expectations.",
-      avatar: "👩‍💼",
-      rating: 5,
-    },
-    {
-      name: "Mike Chen",
-      role: "Startup Founder",
-      content:
-        "Working with Alex was a game-changer for our startup. He built our MVP in record time without compromising on quality.",
-      avatar: "👨‍💻",
-      rating: 5,
-    },
-    {
-      name: "Emily Davis",
-      role: "Design Director",
-      content:
-        "Alex has an incredible ability to bring designs to life. His code is clean, efficient, and perfectly matches our design vision.",
-      avatar: "👩‍🎨",
-      rating: 5,
-    },
-  ];
+
+  
 
   useEffect(() => {
     setIsLoaded(true);
@@ -405,7 +380,7 @@ export default function Hero() {
         />
 
         {/* Radial Waves */}
-        <div className=" hidden md:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div className=" block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <div className="w-96 h-96 border border-orange-500/10 rounded-full animate-ping-slow"></div>
           <div className="absolute inset-8 border border-red-500/10 rounded-full animate-ping-slow delay-1000"></div>
           <div className="absolute inset-16 border border-blue-500/10 rounded-full animate-ping-slow delay-2000"></div>
@@ -436,34 +411,34 @@ export default function Hero() {
         <div className=" hidden md:block  absolute top-20 left-10 text-orange-400/30 text-4xl font-mono animate-float-code hover:scale-110 transition-transform">
           {"</>"}
         </div>
-        <div className=" hidden md:block  absolute top-40 right-20 text-blue-400/30 text-3xl font-mono animate-float-code delay-700 hover:scale-110 transition-transform">
+        <div className=" block  absolute top-40 right-20 text-blue-400/30 text-3xl font-mono animate-float-code delay-700 hover:scale-110 transition-transform">
           {"{}"}
         </div>
-        <div className=" hidden md:block  absolute bottom-40 left-20 text-green-400/30 text-5xl font-mono animate-float-code delay-1000 hover:scale-110 transition-transform">
+        <div className=" block  absolute bottom-40 left-20 text-green-400/30 text-5xl font-mono animate-float-code delay-1000 hover:scale-110 transition-transform">
           {"[]"}
         </div>
         <div className=" hidden md:block  absolute bottom-20 right-40 text-purple-400/30 text-2xl font-mono animate-float-code delay-1500 hover:scale-110 transition-transform">
           {"()"}
         </div>
-        <div className=" hidden md:block  absolute top-1/3 left-1/3 text-yellow-400/25 text-3xl font-mono animate-pulse-glow delay-800">
+        <div className=" block  absolute top-1/3 left-1/3 text-yellow-400/25 text-3xl font-mono animate-pulse-glow delay-800">
           {"console.log()"}
         </div>
-        <div className=" hidden md:block  absolute bottom-1/3 right-1/3 text-pink-400/25 text-2xl font-mono animate-pulse-glow delay-1200">
+        <div className=" block  absolute bottom-1/3 right-1/3 text-pink-400/25 text-2xl font-mono animate-pulse-glow delay-1200">
           {"const"}
         </div>
-        <div className=" hidden md:block  absolute top-2/3 left-1/5 text-indigo-400/25 text-2xl font-mono animate-pulse-glow delay-1600">
+        <div className="hidden md:block  absolute top-2/3 left-1/5 text-indigo-400/25 text-2xl font-mono animate-pulse-glow delay-1600">
           {"function()"}
         </div>
         <div className=" hidden md:block  absolute top-1/5 right-1/5 text-emerald-400/25 text-3xl font-mono animate-pulse-glow delay-2000">
           {"=>"}
         </div>
-        <div className=" hidden md:block  absolute top-10 right-10 text-red-400/20 text-2xl font-mono animate-float-code delay-[1800ms]">
+        <div className=" block  absolute top-10 right-10 text-red-400/20 text-2xl font-mono animate-float-code delay-[1800ms]">
           {"<script>"}
         </div>
-        <div className=" hidden md:block  absolute bottom-10 left-10 text-cyan-400/20 text-2xl font-mono animate-float-code delay-[2000ms]">
+        <div className=" block  absolute bottom-10 left-10 text-cyan-400/20 text-2xl font-mono animate-float-code delay-[2000ms]">
           {"</script>"}
         </div>
-        <div className=" hidden md:block  absolute top-0 left-1/4 text-gray-400/20 text-sm font-mono animate-pulse-glow delay-1000">
+        <div className=" block  absolute top-0 left-1/4 text-gray-400/20 text-sm font-mono animate-pulse-glow delay-1000">
           {"$ npm run dev"}
         </div>
         {/* <div className=" hidden md:block  absolute top-[70%] left-[65%] text-white/10 italic text-xs font-mono animate-float-code delay-[2300ms]">
@@ -497,7 +472,10 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Enhanced Hero Section */}
-        <section className="min-h-screen flex items-center justify-center py-20 relative" id="portfolio">
+        <section
+          className="min-h-screen flex items-center justify-center py-20 relative mt-10 "
+          id="portfolio"
+        >
           <div
             className={
               "text-center transition-all duration-1000 " +
@@ -544,14 +522,33 @@ export default function Hero() {
                 <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
                   <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center space-x-2 shadow-lg hover:scale-105 transition-transform cursor-pointer">
                     <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                    <span >{userData.availabilityText}</span>
+                    <span>{userData.availabilityText}</span>
                   </div>
                 </div>
               )}
             </div>
 
             {/* Enhanced Name & Title with Typewriter Effect */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-4 leading-tight hover:scale-105 transition-transform duration-300">
+            <h1
+              className="text-6xl md:text-7xl lg:text-8xl italic leading-tight hover:scale-105 transition-transform duration-300 tracking-wider transform mb-4 "
+              style={{
+                fontFamily:
+                  "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
+                background:
+                  "linear-gradient(135deg, #fbbf24 0%, #f59e0b 25%, #d97706 50%, #c2410c 75%, #9a3412 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+                fontWeight: "900",
+                textShadow: `
+         1px 1px 0px #d97706,
+         -1px -1px 0px #d97706,
+         1px -1px 0px #d97706,
+         -1px 1px 0px #d97706,
+         2px 2px 4px rgba(0,0,0,0.4)
+       `,
+              }}
+            >
               <span className="inline-block animate-fade-in-up">
                 {userData.name}
               </span>
@@ -613,36 +610,42 @@ export default function Hero() {
             </div>
 
             {/* Enhanced CTA Buttons with Magnetic Effect */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-8 sm:mb-12 px-4">
               <a
                 href="https://www.linkedin.com/in/dipayan-dey-033b38309/"
-                className="group bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-2xl hover:shadow-orange-500/25 hover:scale-105 flex items-center space-x-3 relative overflow-hidden"
+                className="group bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-4 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-xl font-bold text-sm sm:text-lg transition-all duration-300 shadow-lg sm:shadow-2xl hover:shadow-orange-500/25 hover:scale-105 flex items-center justify-center space-x-2 sm:space-x-3 relative overflow-hidden w-full sm:w-auto max-w-xs sm:max-w-none"
                 onMouseEnter={(e) => {
-                  e.target.style.transform = "scale(1.05) rotate(1deg)";
+                  if (window.innerWidth >= 640) {
+                    e.target.style.transform = "scale(1.05) rotate(1deg)";
+                  }
                 }}
                 onMouseLeave={(e) => {
                   e.target.style.transform = "scale(1) rotate(0deg)";
                 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300 relative z-10" />
-                <span className="relative z-10">Get In Touch</span>
-                <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 group-hover:animate-ping rounded-xl"></div>
+                <Send className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300 relative z-10 flex-shrink-0" />
+                <span className="relative z-10 whitespace-nowrap">
+                  Get In Touch
+                </span>
+                <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 group-hover:animate-ping rounded-lg sm:rounded-xl"></div>
               </a>
 
               <a
                 href={userData.resumeUrl}
                 download
-                className="group border-2 border-neutral-600 hover:border-orange-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 flex items-center space-x-3 hover:bg-gradient-to-r hover:from-orange-500/10 hover:to-red-500/10 relative"
+                className="group border-2 border-neutral-600 hover:border-orange-500 text-white px-4 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-xl font-bold text-sm sm:text-lg transition-all duration-300 flex items-center justify-center space-x-2 sm:space-x-3 hover:bg-gradient-to-r hover:from-orange-500/10 hover:to-red-500/10 relative w-full sm:w-auto max-w-xs sm:max-w-none"
                 onMouseEnter={(e) => {
-                  e.target.style.transform = "scale(1.05) rotate(-1deg)";
+                  if (window.innerWidth >= 640) {
+                    e.target.style.transform = "scale(1.05) rotate(-1deg)";
+                  }
                 }}
                 onMouseLeave={(e) => {
                   e.target.style.transform = "scale(1) rotate(0deg)";
                 }}
               >
-                <Download className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-                <span>Download Resume</span>
+                <Download className="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform duration-300 flex-shrink-0" />
+                <span className="whitespace-nowrap">Download Resume</span>
               </a>
             </div>
 
@@ -665,7 +668,7 @@ export default function Hero() {
         </section>
 
         {/* About Section */}
-        <section className="py-20 " id="about">
+        <section className=" " id="about">
           <div
             className={
               "transition-all duration-1000 delay-300 " +
@@ -674,9 +677,11 @@ export default function Hero() {
                 : "opacity-0 translate-y-10")
             }
           >
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-               {"<>"} About{" "}
+           <div className="text-center mb-2">
+              <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6" style={{    fontFamily:
+                  "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",}}>
+                {"<>"} About{" "}
+                <span></span>
                 <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
                   Me {"</>"}
                 </span>
@@ -685,16 +690,19 @@ export default function Hero() {
 
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="space-y-6">
-                <p className="text-lg text-neutral-300 leading-relaxed mt-10 text-center">
+                <p
+                  className="text-lg text-neutral-300 leading-relaxed mt-10 text-center md:text-st p-3 md:p-0"
+                  style={{ fontFamily: "'Roboto', 'Lobster'" }}
+                >
                   {userData.bio}
                 </p>
 
-                <div className="flex flex-wrap gap-4">
+                <div className="flex  justify-center gap-4">
                   {/* <div className="flex items-center space-x-2 bg-neutral-900/50 px-4 py-2 rounded-lg hover:bg-neutral-800/50 transition-colors">
                     <Coffee className="w-5 h-5 text-orange-400" />
                     <span className="text-neutral-300">Coffee Enthusiast</span>
                   </div> */}
-                  <div className="flex items-center space-x-2 bg-neutral-900/50 px-4 py-2 rounded-lg hover:bg-neutral-800/50 transition-colors">
+                  <div className="flex items-center  space-x-2 bg-neutral-900/50 px-4 py-2 rounded-lg hover:bg-neutral-800/50 transition-colors">
                     <Heart className="w-5 h-5 text-red-400" />
                     <span className="text-neutral-300">
                       Open Source Contributor
@@ -808,8 +816,9 @@ export default function Hero() {
             }
           >
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              {"<>"}  My{" "}
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" style={{    fontFamily:
+                  "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",}}>
+                {"<>"} My{" "}
                 <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
                   Skills {"</>"}
                 </span>
@@ -847,7 +856,9 @@ export default function Hero() {
                 >
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-3">
-                      <span className="text-2xl">{skill.icon}</span>
+                 <div className=" border border-neutral-800 p-2 rounded-xl">
+                     <img src={skill.icon} alt={skill.name} className="w-6 h-6" />
+                 </div>
                       <span className="text-white font-semibold">
                         {skill.name}
                       </span>
@@ -869,7 +880,7 @@ export default function Hero() {
         </section>
 
         {/* Projects Section */}
-        <Project/>
+        <Project />
 
         {/* Testimonials Section */}
         {/* <section className="py-20">
@@ -983,7 +994,7 @@ export default function Hero() {
                     >
                       <path d="M12 .02C5.373.02 0 5.394 0 12.019c0 2.118.552 4.154 1.604 5.963L.05 23.95l6.14-1.536A11.94 11.94 0 0012 24.02c6.627 0 12-5.373 12-12s-5.373-11.998-12-11.998zm0 21.82c-1.872 0-3.693-.492-5.295-1.426l-.379-.225-3.644.911.97-3.553-.245-.374A9.815 9.815 0 012.18 12c0-5.421 4.406-9.82 9.82-9.82 5.42 0 9.82 4.399 9.82 9.82 0 5.414-4.4 9.82-9.82 9.82zm5.428-7.362c-.296-.148-1.754-.867-2.027-.965-.273-.099-.472-.148-.67.148-.197.296-.768.965-.94 1.162-.173.198-.347.223-.643.075-.296-.148-1.25-.461-2.38-1.471-.88-.785-1.474-1.753-1.647-2.05-.173-.296-.018-.456.13-.603.134-.133.296-.347.444-.52.148-.174.197-.296.296-.494.099-.198.05-.371-.025-.52-.075-.148-.669-1.611-.916-2.206-.242-.58-.487-.501-.67-.51l-.572-.01c-.197 0-.52.074-.793.371s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.148.197 2.095 3.199 5.077 4.487.71.307 1.263.49 1.694.628.712.227 1.36.195 1.872.118.571-.084 1.754-.718 2.002-1.41.247-.692.247-1.286.173-1.41-.074-.124-.271-.198-.567-.346z" />
                     </svg> */}
-                    <FaWhatsapp size={30}/>
+                    <FaWhatsapp size={30} />
                     <span>Chat on WhatsApp</span>
                   </a>
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { ReactTyped } from "react-typed";
 import {
   MapPin,
   Phone,
@@ -7,12 +8,10 @@ import {
   ExternalLink,
   Briefcase,
 } from "lucide-react";
-import CV from "../assets/My_Cv_.pdf"
+import CV from "../assets/My_Cv_.pdf";
 const ResumeSection = () => {
   const handleDownloadCV = () => {
-    
     window.open(CV, "_blank");
-
   };
 
   const experience = [
@@ -45,11 +44,16 @@ const ResumeSection = () => {
   ];
 
   return (
-    <section id="resume" className="py-20 bg-transparent" >
-      <div className="container mx-auto px-6 w-full">
+    <section id="resume" className=" bg-transparent mt-10">
+      <div className="mx-auto px-0 sm:px-6 lg:px-8 w-full">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent mb-4 pb-6">
+        <div className="text-center mb-8">
+          <h2 className="text-5xl font-bold bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent mb-4 pb-6" style={
+            {
+                  fontFamily:
+                  "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
+            }
+          }>
             {"<>"} <span className="text-white">My</span> Resume {"</>"}
           </h2>
           <button
@@ -62,26 +66,33 @@ const ResumeSection = () => {
         </div>
 
         {/* Contact Info */}
-        <div className="flex flex-wrap justify-center gap-8 mb-16 bg-white/5 backdrop-blur-sm p-8 border border-white/10 rounded-2xl">
-          <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+        <div className="flex flex-col md:flex-row flex-wrap justify-start md:justify-center items-center gap-4 md:gap-10 mb-16 bg-white/5 backdrop-blur-sm p-6 md:p-8 border border-white/10 rounded-2xl w-full">
+          {/* Location */}
+          <div className="flex items-center gap-3 w-full md:w-auto">
             <div className="p-2 bg-gradient-to-r from-orange-400 to-red-500 rounded-full">
               <MapPin size={18} className="text-white" />
             </div>
-            <span className="text-sm md:text-base">
+            <span className="text-sm md:text-base break-words">
               Karakberia, Joypur, Bankura, West Bengal, 722154
             </span>
           </div>
-          <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+
+          {/* Phone */}
+          <div className="flex items-center gap-3 w-full md:w-auto">
             <div className="p-2 bg-gradient-to-r from-orange-400 to-red-500 rounded-full">
               <Phone size={18} className="text-white" />
             </div>
             <span className="text-sm md:text-base">8389806944</span>
           </div>
-          <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+
+          {/* Email */}
+          <div className="flex items-center gap-3 w-full md:w-auto">
             <div className="p-2 bg-gradient-to-r from-orange-400 to-red-500 rounded-full">
               <Mail size={18} className="text-white" />
             </div>
-            <span className="text-sm md:text-base">dipayandey49@gmail.com</span>
+            <span className="text-sm md:text-base break-words">
+              dipayandey49@gmail.com
+            </span>
           </div>
         </div>
 
@@ -90,105 +101,187 @@ const ResumeSection = () => {
           {/* Left Column */}
           <div className="lg:col-span-2 space-y-12">
             {/* Work Experience */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <div className="flex items-center gap-3 mb-8">
+            <div className="min-h-screen ">
+              <div className="max-w-4xl mx-auto">
+                {/* Code Editor Window */}
+                <div className="bg-slate-900 rounded-2xl border border-slate-700 shadow-2xl overflow-hidden" >
+                  {/* Title Bar */}
+                  <div className="bg-slate-800 px-6 py-4 border-b border-slate-700">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                        <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                        <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                        <span className="text-slate-400 ml-4 font-mono text-sm" >
+                          resume.js
+                        </span>
+                      </div>
+                      {/* <div className="flex items-center gap-3">
                 <div className="text-2xl">💼</div>
-                <h3 className="text-2xl font-bold bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+                <h3 className="text-xl font-bold bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
                   Work Experience
                 </h3>
-              </div>
-
-              <div className="relative pl-8">
-                <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-orange-400 to-red-500 rounded-full"></div>
-                <div className="absolute left-[-4px] top-2 w-2 h-2 bg-orange-400 rounded-full"></div>
-
-                <div className="mb-6">
-                  <div className="text-orange-400 font-semibold mb-2">
-                    Current - Fresher
-                  </div>
-                  <h4 className="text-xl font-bold text-gray-800 dark:text-white mb-1">
-                    Aspiring Data Analyst & MERN Stack Developer
-                  </h4>
-                  <div className="text-gray-600 dark:text-gray-400 font-medium mb-5">
-                    {/* Self-Directed Learning */}
+              </div> */}
+                    </div>
                   </div>
 
-                  {/* JSON Styled Content */}
-                  <div className="transition-colors">
-                    {/* Top bar with circles */}
-                    {/* <div className="flex items-center space-x-2 mb-6">
-                      <div className="w-3 h-3 bg-red-500 rounded-full "></div>
-                      <div className="w-3 h-3 bg-yellow-500 rounded-full "></div>
-                      <div className="w-3 h-3 bg-green-500 rounded-full "></div>
-                      <span className="text-neutral-400 ml-4 font-mono text-sm">
-                        resume.js
-                      </span>
-                    </div> */}
+                  {/* Code Content */}
+                  <div className="p-6 md:p-8 bg-slate-900">
+                    <div className="font-mono text-sm md:text-base leading-relaxed">
+                      {/* Line numbers */}
+                      <div className="flex">
+                        <div className="text-slate-500 select-none mr-6 text-right hidden md:block" style={
+            {
+                  fontFamily:
+                  "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
+            }
+          }>
+                          <div className="leading-7">1</div>
+                          <div className="leading-7">2</div>
+                          <div className="leading-7">3</div>
+                          <div className="leading-7">4</div>
+                          <div className="leading-7">5</div>
+                          <div className="leading-7">6</div>
+                          <div className="leading-7">7</div>
+                          <div className="leading-7">8</div>
+                          <div className="leading-7">9</div>
+                          <div className="leading-7">10</div>
+                          <div className="leading-7">11</div>
+                          <div className="leading-7">12</div>
+                          <div className="leading-7">13</div>
+                          <div className="leading-7">14</div>
+                          <div className="leading-7">15</div>
+                          <div className="leading-7">16</div>
+                        </div>
 
-                    {/* Code Content */}
-                    <div className="font-mono text-sm space-y-2">
-                      <div className="text-purple-400">
-                        const <span className="text-blue-400">resume</span> ={" "}
-                        {"{"}
-                      </div>
+                        {/* Code */}
+                        <div className="flex-1" >
+                          <div className="leading-7">
+                            <span className="text-purple-400">const</span>{" "}
+                            <span className="text-blue-400">resume</span>{" "}
+                            <span className="text-white">=</span>{" "}
+                            <span className="text-white">{"{"}</span>
+                          </div>
 
-                      <div className="text-neutral-400 ml-4">
-                        title:{" "}
-                        <span className="text-green-400">
-                          'Aspiring Data Analyst & MERN Stack Developer'
-                        </span>
-                        ,
-                      </div>
+                          <div className="leading-7 ml-4">
+                            <span className="text-slate-300">title:</span>{" "}
+                            <span className="text-green-400 ">
+                              <ReactTyped
+                                strings={[
+                                  "'Aspiring Data Analyst' ",
+                                  "'MERN Stack Developer'"
+                                ]}
+                                typeSpeed={60} // typing speed
+                                backSpeed={40} // backspace speed
+                                loop // infinite loop
+                              />
+                            </span>
+                            <span className="text-white">,</span>
+                          </div>
 
-                      <div className="text-neutral-400 ml-4">
-                        status:{" "}
-                        <span className="text-green-400">
-                          'Current - Fresher'
-                        </span>
-                        ,
-                      </div>
+                          <div className="leading-7 ml-4">
+                            <span className="text-slate-300">status:</span>{" "}
+                            <span className="text-green-400">
+                              'Current - Fresher'
+                            </span>
+                            <span className="text-white">,</span>
+                          </div>
 
-                      <div className="text-neutral-400 ml-4">
-                        learning:{" "}
-                        <span className="text-green-400">
-                          'Self-Directed Learning'
-                        </span>
-                        ,
-                      </div>
+                          <div className="leading-7 ml-4">
+                            <span className="text-slate-300">learning:</span>{" "}
+                            <span className="text-green-400">
+                              'Self-Directed Learning'
+                            </span>
+                            <span className="text-white">,</span>
+                          </div>
 
-                      <div className="text-neutral-400 ml-4">skills: {"{"}</div>
-                      <div className="ml-8 text-neutral-400">
-                        DataAnalysis: [
-                        <span className="text-green-400">'Python'</span>,{" "}
-                        <span className="text-green-400">'Pandas'</span>,{" "}
-                        <span className="text-green-400">'NumPy'</span>,{" "}
-                        <span className="text-green-400">'Matplotlib'</span>,{" "}
-                        <span className="text-green-400">'Seaborn'</span>],
-                      </div>
-                      <div className="ml-8 text-neutral-400">
-                        MERNStack: [
-                        <span className="text-green-400">'React'</span>,{" "}
-                        <span className="text-green-400">'Node.js'</span>,{" "}
-                        <span className="text-green-400">'Express.js'</span>,{" "}
-                        <span className="text-green-400">'MongoDB'</span>]
-                      </div>
-                      <div className="text-neutral-400 ml-4">{"},"}</div>
+                          <div className="leading-7 ml-4">
+                            <span className="text-slate-300">skills:</span>{" "}
+                            <span className="text-white">{"{"}</span>
+                          </div>
 
-                      <div className="text-neutral-400 ml-4">
-                        about:{" "}
-                        <span className="text-green-400">
-                          'Enthusiastic and detail-oriented professional with
-                          hands-on experience in both Data Analysis and MERN
-                          Stack Development. Passionate about solving real-world
-                          problems through data-driven insights and full-stack
-                          solutions.'
-                        </span>
-                      </div>
+                          <div className="leading-7 ml-8">
+                            <span className="text-slate-300">
+                              DataAnalysis:
+                            </span>{" "}
+                            <span className="text-white">[</span>
+                            <span className="text-green-400">'Python'</span>
+                            <span className="text-white">,</span>{" "}
+                            <span className="text-green-400">'Pandas'</span>
+                            <span className="text-white">,</span>{" "}
+                            <span className="text-green-400">'NumPy'</span>
+                            <span className="text-white">,</span>{" "}
+                            <span className="text-green-400">'Matplotlib'</span>
+                            <span className="text-white">,</span>{" "}
+                            <span className="text-green-400">'Seaborn'</span>
+                            <span className="text-white">],</span>
+                          </div>
 
-                      <div className="text-purple-400">{"}"}</div>
+                          <div className="leading-7 ml-8">
+                            <span className="text-slate-300">MERNStack:</span>{" "}
+                            <span className="text-white">[</span>
+                            <span className="text-green-400">'React'</span>
+                            <span className="text-white">,</span>{" "}
+                            <span className="text-green-400">'Node.js'</span>
+                            <span className="text-white">,</span>{" "}
+                            <span className="text-green-400">'Express.js'</span>
+                            <span className="text-white">,</span>{" "}
+                            <span className="text-green-400">'MongoDB'</span>
+                            <span className="text-white">]</span>
+                          </div>
+
+                          <div className="leading-7 ml-4">
+                            <span className="text-white">{"}"}</span>
+                            <span className="text-white">,</span>
+                          </div>
+
+                          <div className="leading-7 ml-4">
+                            <span className="text-slate-300">about:</span>{" "}
+                            <div className="text-green-400 break-words">
+                              'Passionate Data Analyst and MERN Stack Developer
+                              dedicated to building
+                              {/* </div> */}
+                              {/* <div className="text-green-400 ml-4 break-words"> */}
+                              scalable web applications and deriving actionable
+                              insights from data.
+                              {/* </div> */}
+                              {/* <div className="text-green-400 ml-4 break-words"> */}
+                              Committed to learning, problem-solving, and
+                              delivering real-world solutions.'
+                            </div>
+                          </div>
+
+                          <div className="leading-7">
+                            <span className="text-white">{"}"}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Bottom Status Bar */}
+                  <div className="bg-slate-800 px-6 py-3 border-t border-slate-700">
+                    <div className="flex items-center justify-between text-xs text-slate-400">
+                      <div className="flex items-center space-x-4">
+                        <span>JavaScript</span>
+                        <span>UTF-8</span>
+                        <span>LF</span>
+                      </div>
+                      <div className="flex items-center space-x-4">
+                        <span>Ln 16, Col 1</span>
+                        <span>Spaces: 2</span>
+                      </div>
                     </div>
                   </div>
                 </div>
+
+                {/* Timeline Indicator */}
+                {/* <div className="mt-8 flex justify-center">
+          <div className="relative">
+            <div className="w-1 h-12 bg-gradient-to-b from-orange-400 to-red-500 rounded-full"></div>
+            <div className="absolute left-[-4px] top-2 w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
+          </div>
+        </div> */}
               </div>
             </div>
 
@@ -246,7 +339,7 @@ const ResumeSection = () => {
 
                 <div>
                   <div className="text-orange-400 font-semibold text-sm mb-2">
-                    2021 - 2024
+                    2023 - {new Date().getFullYear()}
                   </div>
                   <h4 className="font-bold text-gray-800 dark:text-white mb-1">
                     Diploma in Computer Science & Technology

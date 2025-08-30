@@ -60,7 +60,7 @@ const navLinks = [
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 hover:bg-white/10 rounded-lg transition-all duration-500 relative z-60 ml-auto"
+            className="lg:hidden p-2  rounded-lg transition-all duration-500 relative z-60 ml-auto cursor-pointer"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <div className="w-6 h-6 relative">
@@ -109,12 +109,12 @@ const navLinks = [
                 isMenuOpen ? "scale-100 rotate-0" : "scale-75 rotate-12"
               }`} style={{ transitionDelay: isMenuOpen ? '0.4s' : '0s' }}>
                 {/* <Logo /> */}
-                 <h1 className='text-white font-mono'><span className='text-cyan-500'>Mr</span> Dipayan</h1>
+                    <h1 className='text-white font-bold font-mono'><span className='bg-gradient-to-r from-orange-700 to-red-500 bg-clip-text text-transparent'>Mr.</span> Dipayan</h1>
               </div>
             </div>
 
             {/* Navigation Links */}
-            <div className="px-8 py-12 space-y-2 ">
+            <div className="px-8 py-8 space-y-2 flex flex-col  items-center ">
               {navLinks.map((item, index) => (
                 <div
                   key={item.label}
@@ -129,22 +129,22 @@ const navLinks = [
                 >
                   <a
                     href={item.href}
-                    className="group block relative overflow-hidden"
+                    className="group block relative overflow-hidden "
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    <div className="relative py-4 px-6 rounded-xl hover:bg-gradient-to-r hover:from-orange-500/20 hover:to-red-600/20 transition-all duration-400 border border-transparent hover:border-orange-500/40 transform hover:scale-105">
-                      <span className="font-mono text-xl font-medium text-white group-hover:text-orange-400 transition-all duration-300 relative z-10 block">
+                    <div className="relative py-4 px-6 rounded-xl transition-all duration-400 border border-transparent  transform hover:scale-105 text-white hover:text-orange-500">
+                      <span className="font-mono text-xl font-medium text-white hover:text-orange-500  transition-all duration-300 relative z-10 block">
                         {item.label}
                       </span>
                       
                       {/* Animated Background */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-orange-500/0 via-orange-500/10 to-red-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 transform scale-x-0 group-hover:scale-x-100"></div>
+                      {/* <div className="absolute inset-0 bg-gradient-to-r from-orange-500/0 via-orange-500/10 to-red-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 transform scale-x-0 group-hover:scale-x-100"></div> */}
                       
                       {/* Bottom Line Animation */}
-                      <div className="absolute bottom-0 left-6 right-6 h-0.5 bg-gradient-to-r from-orange-500 to-red-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-400 origin-left"></div>
+                      <div className="absolute bottom-0 left-6 right-6 h-1 bg-gradient-to-r from-orange-500 to-red-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-400 origin-left"></div>
                       
                       {/* Side Accent */}
-                      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 bg-orange-500 group-hover:h-8 transition-all duration-400 rounded-r"></div>
+                      {/* <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 bg-orange-500 group-hover:h-8 transition-all duration-400 rounded-r"></div> */}
                     </div>
                   </a>
                 </div>
@@ -152,7 +152,7 @@ const navLinks = [
             </div>
 
             {/* Footer Section */}
-            <div className={`absolute bottom-8 left-8 right-8 transform transition-all duration-600 ${
+            {/* <div className={`absolute bottom-8 left-8 right-8 transform transition-all duration-600 ${
               isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
             }`} style={{ transitionDelay: isMenuOpen ? '0.8s' : '0s' }}>
               <div className="border-t border-orange-500/20 pt-6">
@@ -165,7 +165,7 @@ const navLinks = [
                   <div className="w-2 h-2 bg-red-500 rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </nav>

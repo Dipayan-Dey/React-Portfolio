@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Eye, Github, ExternalLink, ArrowRight, Search } from "lucide-react";
+import { Eye, Github, ExternalLink, ArrowRight, Search, GithubIcon } from "lucide-react";
 import curiox from "../assets/ProjectImage/FullStack/curiox.png";
 import taskflow from "../assets/ProjectImage/FullStack/taskflow.png";
 import music from "../assets/ProjectImage/Frontend/music.png";
@@ -27,8 +27,9 @@ export default function Project() {
         "MongoDB",
         "Express.js",
         "React.js",
-        "Node.js",
         "Tailwind CSS",
+        "Cloudinary",
+        "Multer"
       ],
       liveUrl: "https:/curiox.vercel.app",
       githubUrl: "https://github.com/Dipayan-Dey/Curiox-educational-platform",
@@ -167,7 +168,7 @@ export default function Project() {
 
 
   return (
-    <section className="py-20" id="projects">
+    <section className="" id="projects">
       <div
         className={
           "transition-all duration-1000 delay-700 " +
@@ -175,13 +176,18 @@ export default function Project() {
         }
       >
         <div className="text-center mb-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" style={
+            {
+                  fontFamily:
+                  "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
+            }
+          }>
             {"<>"} Featured{" "}
             <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
               Projects {"</>"}
             </span>
           </h2>
-          <p className="text-xl text-neutral-300 max-w-2xl mx-auto">
+          <p className="text-xl text-neutral-300 max-w-2xl mx-auto" >
             A showcase of my recent work and creative solutions
           </p>
         </div>
@@ -286,7 +292,7 @@ export default function Project() {
           )}
         </div>
 
-       <div className="text-center mt-12 relative">
+     <div className="text-center mt-12 relative">
   <a
     onClick={() => setShow(prev => !prev)}
     className="cursor-pointer group inline-flex items-center space-x-2 bg-neutral-900 hover:bg-neutral-800 border border-neutral-700 hover:border-orange-500 text-neutral-300 hover:text-orange-400 px-8 py-4 rounded-xl font-semibold transition-all duration-300"
@@ -294,36 +300,37 @@ export default function Project() {
     <span>View All Projects</span>
     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
   </a>
-  
-  {/* Modal positioned directly below the button */}
-  <div 
-    className={`mt-4 bg-neutral-900 border border-neutral-700 rounded-xl shadow-lg p-4 w-64 mx-auto transition-all duration-300 ${
-      show 
-        ? 'opacity-100 translate-y-0 visible' 
+
+  {/* Overlay modal */}
+  <div
+    className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-neutral-900 border border-neutral-700 rounded-xl shadow-lg p-4 w-64 transition-all duration-300 z-50 ${
+      show
+        ? 'opacity-100 translate-y-0 visible'
         : 'opacity-0 -translate-y-2 invisible'
     }`}
   >
-    <h2 className="text-lg font-semibold mb-2 text-center">View</h2>
-    <div className="flex flex-col gap-2 text-center">
+    <h2 className="text-lg font-semibold mb-2 text-center text-white">View</h2>
+    <div className="flex flex-col gap-6 text-center">
       <a
         href="https://github.com/Dipayan-Dey"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-orange-400 hover:underline"
+        className="text-orange-400 hover:bg-gradient-to-r from-orange-400 to-red-500 hover:text-white transition-all duration-300 hover:p-4 rounded-2xl flex justify-center items-center gap-4"
       >
-        Web Development
+        <GithubIcon /> <span>Web Development</span>
       </a>
       <a
         href="https://github.com/Mr-Dipayan-Dey"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-orange-400 hover:underline"
+        className="text-orange-400 hover:bg-gradient-to-r from-orange-400 to-red-500 hover:text-white transition-all duration-300 hover:p-4 rounded-2xl flex justify-center items-center gap-4"
       >
-        Data Analysis
+        <GithubIcon /> <span>Data Analysis</span>
       </a>
     </div>
   </div>
 </div>
+
         
       </div>
     </section>

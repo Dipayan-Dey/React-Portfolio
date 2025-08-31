@@ -636,18 +636,15 @@ export default function Hero() {
                 <div className="w-52 h-52 mx-auto rounded-full border border-dotted border-red-500/20"></div>
               </div>
 
-             <div className="relative w-48 h-48 mx-auto rounded-full overflow-hidden border-4  p-1 bg-gradient-to-r from-orange-500 to-red-500 hover:scale-110 transition-transform duration-300">
- <div>
-   <img
-    src={userData.avatar || "/placeholder.svg"}
-    alt={userData.name}
-    className="w-full h-full object-contain"
-  />
- </div>
-</div>
-
-
-          
+              <div className="relative w-48 h-48 mx-auto rounded-full overflow-hidden border-4  p-1 bg-gradient-to-r from-orange-500 to-red-500 hover:scale-110 transition-transform duration-300">
+                <div>
+                  <img
+                    src={userData.avatar || "/placeholder.svg"}
+                    alt={userData.name}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
 
               {/* Enhanced Availability Badge */}
               {userData.availableForHire && (
@@ -1019,23 +1016,21 @@ export default function Hero() {
                         {skill.name}
                       </span>
                     </div>
-                   
+
                     <span className="text-orange-400  flex flex-col">
                       {skill.level}%
-                        <span className="text-sm text-white text-right right-0">
-                    {" "}
-                    {skill.level >= 90
-                      ? "Expert"
-                      : skill.level >= 70
-                      ? "Advanced"
-                      : "Intermediate"}
-                  </span>
+                      <span className="text-sm text-white text-right right-0">
+                        {" "}
+                        {skill.level >= 90
+                          ? "Expert"
+                          : skill.level >= 70
+                          ? "Advanced"
+                          : "Intermediate"}
+                      </span>
                     </span>
                   </div>
-                  
-                 
+
                   <div className="w-full bg-neutral-800 rounded-full h-2">
-                    
                     <div
                       className="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full transition-all duration-1000 ease-out"
                       style={{ width: `${skill.level}%` }}

@@ -5,6 +5,7 @@ import Header from './components/Header'
 import RunningText from './components/RunningText'
 import Footer from './components/Footer'
 import Project from './components/Project'
+import CustomCursor from './components/CustomCursor'
 
 function App() {
    useEffect(() => {
@@ -51,8 +52,11 @@ function App() {
   
   return (
     <div>
-      <Header/>
+      <div className="relative" >
+        <CustomCursor/>
+        <Header/>
       <Hero/>
+      </div>
       {/* <RunningText/> */}
       {/* <Footer/> */}
       {/* <Project/> */}

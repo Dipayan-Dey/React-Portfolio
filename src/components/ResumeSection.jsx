@@ -56,6 +56,9 @@ const ResumeSection = () => {
           }>
             {"<>"} <span className="text-white">My</span> Resume {"</>"}
           </h2>
+           <p className="text-xl text-neutral-300 max-w-2xl mx-auto font-mono mb-8" >
+           MERN Stack Developer | Data Analytics Enthusiast
+          </p>
           <button
             onClick={handleDownloadCV}
             className="cursor-pointer inline-flex items-center gap-2 bg-gradient-to-r from-orange-400 to-red-500 text-white px-6 py-3 rounded-full hover:shadow-lg hover:shadow-orange-500/25 transition-all duration-300 transform hover:scale-105"
@@ -99,9 +102,9 @@ const ResumeSection = () => {
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Left Column */}
-          <div className="lg:col-span-2 space-y-12">
-            {/* Work Experience */}
-            <div className="min-h-screen ">
+          <div className="lg:col-span-2 ">
+            {/*  Resume*/}
+            <div className="lg:min-h-screen mb-12 md:mb-0">
               <div className="max-w-4xl mx-auto">
                 {/* Code Editor Window */}
                 <div className="bg-slate-900 rounded-2xl border border-slate-700 shadow-2xl overflow-hidden" >
@@ -285,8 +288,8 @@ const ResumeSection = () => {
               </div>
             </div>
 
-            {/* Projects */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+            {/* Work Experience */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10">
               <div className="flex items-center gap-3 mb-8">
                 <div className="text-2xl">
                   <Briefcase />

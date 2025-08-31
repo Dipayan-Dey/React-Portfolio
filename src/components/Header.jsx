@@ -40,12 +40,19 @@ const navLinks = [
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo - Hidden on mobile, visible on desktop */}
-          <div className="text-xl lg:text-2xl font-bold  lg:block">
-          <h1 className='text-white font-bold font-mono'><span className='bg-gradient-to-r from-orange-700 to-red-500 bg-clip-text text-transparent'>{"<>"} Mr.</span> Dipayan {"</>"}</h1>
+          <div className="text-3xl lg:text-4xl font-bold  lg:block">
+          <h1 className='text-white font-bold ' style={{
+             fontFamily:
+                  "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
+          }}><span className='bg-gradient-to-r from-orange-700 to-red-500 bg-clip-text text-transparent'>{"<>"} Mr.</span> Dipayan {"</>"}</h1>
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex space-x-8">
+          <div className="hidden lg:flex space-x-8 tracking-[2px]" style={{
+             fontFamily:
+                  "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
+                  
+          }}>
             {navLinks.map((item) => (
               <a
                 key={item.label}
@@ -61,6 +68,7 @@ const navLinks = [
           {/* Mobile Menu Button */}
           <button
             className="lg:hidden p-2  rounded-lg transition-all duration-500 relative z-60 ml-auto cursor-pointer"
+            
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <div className="w-6 h-6 relative">
@@ -109,12 +117,15 @@ const navLinks = [
                 isMenuOpen ? "scale-100 rotate-0" : "scale-75 rotate-12"
               }`} style={{ transitionDelay: isMenuOpen ? '0.4s' : '0s' }}>
                 {/* <Logo /> */}
-                    <h1 className='text-white font-bold font-mono'><span className='bg-gradient-to-r from-orange-700 to-red-500 bg-clip-text text-transparent'>Mr.</span> Dipayan</h1>
+                    <h1 className='text-white font-bold text-2xl' style={{
+             fontFamily:
+                  "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
+          }}><span className='bg-gradient-to-r from-orange-700 to-red-500 bg-clip-text text-transparent'>{"<>"} Mr.</span> Dipayan {"</>"}</h1>
               </div>
             </div>
 
             {/* Navigation Links */}
-            <div className="px-8 py-8 space-y-2 flex flex-col  items-center ">
+            <div className="px-8 py-8 space-y-2 flex flex-col  items-center " >
               {navLinks.map((item, index) => (
                 <div
                   key={item.label}
@@ -132,8 +143,11 @@ const navLinks = [
                     className="group block relative overflow-hidden "
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    <div className="relative py-4 px-6 rounded-xl transition-all duration-400 border border-transparent  transform hover:scale-105 text-white hover:text-orange-500">
-                      <span className="font-mono text-xl font-medium text-white hover:text-orange-500  transition-all duration-300 relative z-10 block">
+                    <div className="relative py-4 px-6 rounded-xl transition-all duration-400 border border-transparent  transform hover:scale-105 text-white hover:text-orange-500" >
+                      <span className="tracking-[4px] text-2xl font-medium text-white hover:text-orange-500  transition-all duration-300 relative z-10 block" style={{
+             fontFamily:
+                  "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
+          }}>
                         {item.label}
                       </span>
                       

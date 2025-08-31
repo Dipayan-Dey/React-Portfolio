@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Eye, Github, ExternalLink, ArrowRight, Search, GithubIcon } from "lucide-react";
+import { Eye, Github, ExternalLink, ArrowRight, Search, GithubIcon, X } from "lucide-react";
 import curiox from "../assets/ProjectImage/FullStack/curiox.png";
 import taskflow from "../assets/ProjectImage/FullStack/taskflow.png";
 import music from "../assets/ProjectImage/Frontend/music.png";
@@ -13,7 +13,7 @@ export default function Project() {
   //     `)
   // }
   const [search, setSearch] = useState("");
-  const [filter, setFilter] = useState("Frontend");
+  const [filter, setFilter] = useState("Full Stack");
   const [show,setShow]=useState(false)
 
   const projects = [
@@ -139,8 +139,8 @@ export default function Project() {
 
   const categories = [
     // "All",
-    "Frontend",
     "Full Stack",
+    "Frontend",
     "Data Analysis",
     "Power BI",
     "AI/ML",
@@ -187,42 +187,109 @@ export default function Project() {
               Projects {"</>"}
             </span>
           </h2>
-          <p className="text-xl text-neutral-300 max-w-2xl mx-auto" >
+          <p className="text-xl text-neutral-300 max-w-2xl mx-auto font-mono" >
             A showcase of my recent work and creative solutions
           </p>
         </div>
 
         {/* 🔹 Search + Filter Controls */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-10 flex-wrap">
-          {/* Search Bar */}
-          <div className="relative w-full md:w-80">
-            <Search className="absolute left-3 top-3 w-5 h-5 text-neutral-500" />
-            <input
-              type="text"
-              placeholder="Search projects..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="pl-10 pr-4 py-2 w-full rounded-lg border border-neutral-700 bg-neutral-900 text-neutral-200 focus:outline-none focus:border-orange-500"
-            />
-          </div>
+       <div className="w-full px-4 sm:px-6">
+      {/* Search and Filter Section */}
+      <div className="flex flex-col-reverse lg:flex-row justify-center items-center gap-4 lg:gap-8 mb-8 lg:mb-12">
+        
+        {/* Search Bar */}
+        <div className="relative w-full sm:w-96 lg:w-80 order-2 lg:order-1">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-neutral-500" />
+          <input
+            type="text"
+            placeholder="Search projects..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="pl-9 sm:pl-10 pr-4 py-2.5 sm:py-3 w-full rounded-lg border border-neutral-700 bg-neutral-900 text-neutral-200 placeholder-neutral-500 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 text-sm sm:text-base transition-all duration-300"
+          />
+        </div>
 
-          {/* Category Tabs */}
-          <div className=" flex flex-wrap justify-center gap-2">
-            {categories.map((cat, idx) => (
-              <button
-                key={idx}
-                onClick={() => setFilter(cat)}
-                className={`cursor-pointer px-5 border border-neutral-700 py-3 rounded-lg font-medium transition-all duration-300 ${
-                  filter === cat
-                    ? "bg-gradient-to-r from-orange-500 to-red-500 text-white"
-                    : "bg-neutral-800 text-neutral-300 hover:bg-neutral-700"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
+        {/* Category Filter Buttons */}
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 order-1 lg:order-2 w-full lg:w-auto">
+          {categories.map((cat, idx) => (
+            <button
+              key={idx}
+              onClick={() => setFilter(cat)}
+              className={`cursor-pointer px-3 sm:px-4 lg:px-5 border border-neutral-700 py-2 sm:py-2.5 lg:py-3 rounded-lg font-medium transition-all duration-300 text-sm sm:text-sm lg:text-base whitespace-nowrap hover:scale-105 transform ${
+                filter === cat
+                  ? "bg-gradient-to-r from-orange-500 to-red-500 text-white border-transparent shadow-lg shadow-orange-500/25"
+                  : "bg-neutral-800 text-neutral-300 hover:bg-neutral-700 hover:border-neutral-600 hover:text-neutral-200"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* View All Projects Section */}
+      <div className="text-center relative mb-5">
+        <button
+          onClick={() => setShow(prev => !prev)}
+          // onMouseLeave={()=>setShow(prev => !prev)}
+          className="cursor-pointer group inline-flex items-center space-x-2 bg-neutral-900 hover:bg-neutral-800 border border-neutral-700 hover:border-orange-500 text-neutral-300 hover:text-orange-400 px-4 sm:px-6 lg:px-8 py-3 sm:py-3.5 lg:py-4 rounded-xl font-semibold transition-all duration-300 text-sm sm:text-base hover:scale-105 transform"
+        >
+          <span>View All Projects</span>
+          <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" />
+        </button>
+
+        {/* Overlay Modal */}
+        <div
+          className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-neutral-900 border border-neutral-700 rounded-xl shadow-2xl p-4 sm:p-6 w-72 sm:w-80 lg:w-96 transition-all duration-300 z-50 ${
+            show
+              ? 'opacity-100 translate-y-0 visible'
+              : 'opacity-0 -translate-y-2 invisible'
+          }`}
+        >
+          {/* Modal Header */}
+          <div className="flex justify-between items-center mb-4 sm:mb-6">
+            <h2 className="text-lg sm:text-xl font-semibold text-white">View Projects</h2>
+            <button
+              onClick={() => setShow(false)}
+              className="text-neutral-400 hover:text-orange-400 transition-colors duration-300 p-1 hover:scale-110 transform"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+          
+          {/* Modal Content */}
+          <div className="flex flex-col gap-3 sm:gap-4">
+            <a
+              href="https://github.com/Dipayan-Dey"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-orange-400 hover:bg-gradient-to-r from-orange-400 to-red-500 hover:text-white transition-all duration-300 rounded-xl flex justify-center items-center gap-3 sm:gap-4 p-3 sm:p-4 hover:scale-105 transform group"
+            >
+              <Github className="w-5 h-5 sm:w-6 sm:h-6  transition-transform duration-300" />
+              <span className="font-medium text-sm sm:text-base">Web Development</span>
+            </a>
+            
+            <a
+              href="https://github.com/Mr-Dipayan-Dey"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-orange-400 hover:bg-gradient-to-r from-orange-400 to-red-500 hover:text-white transition-all duration-300 rounded-xl flex justify-center items-center gap-3 sm:gap-4 p-3 sm:p-4 hover:scale-105 transform group"
+            >
+              <Github className="w-5 h-5 sm:w-6 sm:h-6  transition-transform duration-300" />
+              <span className="font-medium text-sm sm:text-base">Data Analysis</span>
+            </a>
           </div>
         </div>
+
+        {/* Click outside to close modal */}
+        {show && (
+          <div 
+            // className="fixed inset-0 z-40 bg-black bg-opacity-20 lg:bg-transparent" 
+            // onClick={() => setShow(false)}
+          />
+        )}
+      </div>
+    </div>
 
         {/* 🔹 Projects Grid */}
         <div className="grid lg:grid-cols-2 gap-8">
@@ -292,44 +359,7 @@ export default function Project() {
           )}
         </div>
 
-     <div className="text-center mt-12 relative">
-  <a
-    onClick={() => setShow(prev => !prev)}
-    className="cursor-pointer group inline-flex items-center space-x-2 bg-neutral-900 hover:bg-neutral-800 border border-neutral-700 hover:border-orange-500 text-neutral-300 hover:text-orange-400 px-8 py-4 rounded-xl font-semibold transition-all duration-300"
-  >
-    <span>View All Projects</span>
-    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-  </a>
-
-  {/* Overlay modal */}
-  <div
-    className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-neutral-900 border border-neutral-700 rounded-xl shadow-lg p-4 w-64 transition-all duration-300 z-50 ${
-      show
-        ? 'opacity-100 translate-y-0 visible'
-        : 'opacity-0 -translate-y-2 invisible'
-    }`}
-  >
-    <h2 className="text-lg font-semibold mb-2 text-center text-white">View</h2>
-    <div className="flex flex-col gap-6 text-center">
-      <a
-        href="https://github.com/Dipayan-Dey"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-orange-400 hover:bg-gradient-to-r from-orange-400 to-red-500 hover:text-white transition-all duration-300 hover:p-4 rounded-2xl flex justify-center items-center gap-4"
-      >
-        <GithubIcon /> <span>Web Development</span>
-      </a>
-      <a
-        href="https://github.com/Mr-Dipayan-Dey"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-orange-400 hover:bg-gradient-to-r from-orange-400 to-red-500 hover:text-white transition-all duration-300 hover:p-4 rounded-2xl flex justify-center items-center gap-4"
-      >
-        <GithubIcon /> <span>Data Analysis</span>
-      </a>
-    </div>
-  </div>
-</div>
+     
 
         
       </div>

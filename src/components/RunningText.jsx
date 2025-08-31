@@ -2,8 +2,11 @@ import { ReactTyped } from "react-typed";
 
 export default function RunningText() {
   return (
-    <div className="text-center mt-10">
-      <span className="text-white text-3xl md:text-5xl font-extrabold font-mono ">
+    <div className="text-center mt-10 mb-4">
+      <span className="text-white text-3xl md:text-5xl font-extrabold  " style={{
+             fontFamily:
+                  "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
+          }}>
         I'm a {" "}
 
        <span className="bg-gradient-to-r from-orange-700 to-red-500 bg-clip-text text-transparent">

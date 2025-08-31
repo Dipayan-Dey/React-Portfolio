@@ -20,7 +20,7 @@ function App() {
       if (
         e.key === "F12" ||
         (e.ctrlKey && e.shiftKey && ["I", "C"].includes(e.key.toUpperCase())) ||
-        (e.ctrlKey && ["U", "S","A"].includes(e.key.toUpperCase()))
+        (e.ctrlKey && ["U", "S","A","P"].includes(e.key.toUpperCase()))
       ) {
         e.preventDefault();
       }
@@ -41,6 +41,12 @@ function App() {
       document.removeEventListener("dblclick", handleDoubleClick);
        document.addEventListener("selectstart", handleSelectStart);
     };
+    document.addEventListener("keyup", function(e) {
+  if (e.key === "PrintScreen") {
+    alert("Screenshots are disabled!");
+    navigator.clipboard.writeText(""); // Clear clipboard
+  }
+});
   }, []);
   
   return (

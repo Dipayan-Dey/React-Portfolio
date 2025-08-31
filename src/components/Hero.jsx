@@ -102,7 +102,7 @@ import {
   BarChart2,
   Wrench,
 } from "lucide-react";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/me.png";
 import RunningText from "./RunningText";
 import Footer from "./Footer";
 import Project from "./Project";
@@ -171,7 +171,7 @@ export default function Hero() {
   const userData = {
     name: "Dipayan Dey",
     tagline: "Crafting digital experiences with code and creativity",
-    location: "Kolkata , WB",
+    location: "Kolkata , West Bengal",
     email: "deydipayan2006@gmail.com",
     phone: "+91 9239219193",
     website: "https://dipayan-dey.github.io/dipayan-profile/",
@@ -263,56 +263,193 @@ export default function Hero() {
     },
   ];
 
-const skills = {
-  programming: [
-    { name: "Python", level: 95, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-    { name: "JavaScript", level: 92, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-    { name: "C++", level: 80, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
-    { name: "SQL", level: 90, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-    { name: "Java", level: 90, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
-    { name: "C", level: 85, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" }
-  ],
+  const skills = {
+    programming: [
+      {
+        name: "Python",
+        level: 95,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+        bgColor: "bg-blue-100", // Python blue
+      },
+      {
+        name: "JavaScript",
+        level: 92,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+        bgColor: "bg-yellow-100", // JavaScript yellow
+      },
+      {
+        name: "C++",
+        level: 20,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
+        bgColor: "bg-blue-100", // C++ blue
+      },
+      {
+        name: "SQL",
+        level: 90,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+        bgColor: "bg-orange-100", // MySQL orange
+      },
+      {
+        name: "Java",
+        level: 90,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+        bgColor: "bg-red-100", // Java red
+      },
+      {
+        name: "C",
+        level: 85,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
+        bgColor: "bg-blue-100", // C blue
+      },
+    ],
 
-  frontend: [
-    { name: "React", level: 95, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-    { name: "Tailwind CSS", level: 90, icon: "https://avatars.githubusercontent.com/u/30317862?s=200&v=4" },
-    { name: "HTML5", level: 92, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
-    { name: "CSS3", level: 88, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" }
-  ],
+    frontend: [
+      {
+        name: "React",
+        level: 95,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        bgColor: "bg-cyan-100", // React cyan
+      },
+      {
+        name: "Tailwind CSS",
+        level: 90,
+        icon: "https://avatars.githubusercontent.com/u/30317862?s=200&v=4",
+        bgColor: "bg-teal-100", // Tailwind teal
+      },
+      {
+        name: "HTML5",
+        level: 92,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        bgColor: "bg-orange-100", // HTML5 orange
+      },
+      {
+        name: "CSS3",
+        level: 88,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+        bgColor: "bg-blue-100", // CSS3 blue
+      },
+    ],
 
-  backend: [
-    { name: "Node.js", level: 90, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-    { name: "Express.js", level: 88, icon: "https://ajeetchaulagain.com/static/7cb4af597964b0911fe71cb2f8148d64/87351/express-js.png" },
-    { name: "REST APIs", level: 92, icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ8pLM2nPCg_c9kGRQfWQgWHgm3sZbwPSsFg&s" }
-  ],
+    backend: [
+      {
+        name: "Node.js",
+        level: 90,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+        bgColor: "bg-green-100", // Node.js green
+      },
+      {
+        name: "Express.js",
+        level: 88,
+        icon: "https://ajeetchaulagain.com/static/7cb4af597964b0911fe71cb2f8148d64/87351/express-js.png",
+        bgColor: "bg-gray-100", // Express gray
+      },
+      {
+        name: "REST APIs",
+        level: 92,
+        icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ8pLM2nPCg_c9kGRQfWQgWHgm3sZbwPSsFg&s",
+        bgColor: "bg-indigo-100", // REST APIs indigo
+      },
+    ],
 
-  database: [
-    { name: "MongoDB", level: 88, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
-    { name: "MySQL", level: 85, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-    { name: "PostgreSQL", level: 80, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" }
-  ],
+    database: [
+      {
+        name: "MongoDB",
+        level: 88,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+        bgColor: "bg-green-100", // MongoDB green
+      },
+      {
+        name: "MySQL",
+        level: 85,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+        bgColor: "bg-orange-100", // MySQL orange
+      },
+      {
+        name: "PostgreSQL",
+        level: 80,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+        bgColor: "bg-blue-100", // PostgreSQL blue
+      },
+    ],
 
-  analysis: [
-    { name: "Pandas", level: 95, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" },
-    { name: "NumPy", level: 90, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
-    { name: "Matplotlib", level: 88, icon: "https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg" },
-    { name: "Seaborn", level: 85, icon: "https://seaborn.pydata.org/_static/logo-wide-lightbg.svg" },
-    { name: "Excel", level: 90, icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdPG1TdKVdwV0MhHKMTtvb2ZNvfqkTslKSBw&s" },
-    { name: "Power BI", level: 85, icon: "https://cdn.worldvectorlogo.com/logos/power-bi.svg" }
-  ],
+    analysis: [
+      {
+        name: "Pandas",
+        level: 95,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg",
+        bgColor: "bg-purple-100", // Pandas purple
+      },
+      {
+        name: "NumPy",
+        level: 90,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg",
+        bgColor: "bg-blue-100", // NumPy blue
+      },
+      {
+        name: "Matplotlib",
+        level: 88,
+        icon: "https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg",
+        bgColor: "bg-blue-100", // Matplotlib blue
+      },
+      {
+        name: "Seaborn",
+        level: 85,
+        icon: "https://seaborn.pydata.org/_static/logo-wide-lightbg.svg",
+        bgColor: "bg-blue-100", // Seaborn blue
+      },
+      {
+        name: "Excel",
+        level: 90,
+        icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdPG1TdKVdwV0MhHKMTtvb2ZNvfqkTslKSBw&s",
+        bgColor: "bg-green-100", // Excel green
+      },
+      {
+        name: "Power BI",
+        level: 85,
+        icon: "https://cdn.worldvectorlogo.com/logos/power-bi.svg",
+        bgColor: "bg-yellow-100", // Power BI yellow
+      },
+    ],
 
-  tools: [
-    { name: "Git", level: 92, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-    { name: "Jupyter Notebook", level: 95, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" },
-    { name: "VS Code", level: 98, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
-    { name: "Vercel", level: 88, icon: "https://assets.vercel.com/image/upload/v1662130559/front/favicon/vercel/180x180.png" },
-    { name: "Figma", level: 80, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
-    { name: "Docker", level: 75, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" }
-  ]
-};
-
-
-  
+    tools: [
+      {
+        name: "Git",
+        level: 92,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+        bgColor: "bg-orange-100", // Git orange
+      },
+      {
+        name: "Jupyter Notebook",
+        level: 95,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg",
+        bgColor: "bg-orange-100", // Jupyter orange
+      },
+      {
+        name: "VS Code",
+        level: 98,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+        bgColor: "bg-blue-100", // VS Code blue
+      },
+      {
+        name: "Vercel",
+        level: 88,
+        icon: "https://assets.vercel.com/image/upload/v1662130559/front/favicon/vercel/180x180.png",
+        bgColor: "bg-gray-100", // Vercel black/gray
+      },
+      {
+        name: "Figma",
+        level: 80,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+        bgColor: "bg-purple-100", // Figma purple
+      },
+      {
+        name: "Docker",
+        level: 75,
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+        bgColor: "bg-blue-100", // Docker blue
+      },
+    ],
+  };
 
   useEffect(() => {
     setIsLoaded(true);
@@ -334,6 +471,12 @@ const skills = {
     { id: "tools", name: "Tools & Platforms", icon: Wrench },
   ];
 
+  //   const getProficiencyLevel = (level) => {
+  //   if (level >= 90) return { label: "Expert", color: "text-green-700 bg-green-100" };
+  //   if (level >= 80) return { label: "Pro", color: "text-blue-700 bg-blue-100" };
+  //   return { label: "Intermediate", color: "text-yellow-700 bg-yellow-100" };
+  // };
+  // const proficiency=getProficiencyLevel(skills.lavel)
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden relative">
       {/* Advanced Animated Canvas Background */}
@@ -493,29 +636,18 @@ const skills = {
                 <div className="w-52 h-52 mx-auto rounded-full border border-dotted border-red-500/20"></div>
               </div>
 
-              <div className="relative w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-gradient-to-r from-orange-500 to-red-500 p-1  hover:scale-110 transition-transform duration-300">
-                <img
-                  src={userData.avatar || "/placeholder.svg"}
-                  alt={userData.name}
-                  className="w-full h-full object-cover rounded-full bg-neutral-800"
-                />
-              </div>
+             <div className="relative w-48 h-48 mx-auto rounded-full overflow-hidden border-4  p-1 bg-gradient-to-r from-orange-500 to-red-500 hover:scale-110 transition-transform duration-300">
+ <div>
+   <img
+    src={userData.avatar || "/placeholder.svg"}
+    alt={userData.name}
+    className="w-full h-full object-contain"
+  />
+ </div>
+</div>
 
-              {/* Floating particles around avatar */}
-              {/* <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-                {[...Array(8)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="absolute w-2 h-2 bg-orange-400 rounded-full animate-ping"
-                    style={{
-                      top: `${20 + Math.sin(i * 0.785) * 40}%`,
-                      left: `${50 + Math.cos(i * 0.785) * 40}%`,
-                      animationDelay: `${i * 0.2}s`,
-                      animationDuration: '2s'
-                    }}
-                  />
-                ))}
-              </div> */}
+
+          
 
               {/* Enhanced Availability Badge */}
               {userData.availableForHire && (
@@ -569,12 +701,18 @@ const skills = {
               <RunningText />
             </div>
 
-            <p className="text-xl text-neutral-300 max-w-2xl mx-auto mb-8 leading-relaxed animate-fade-in delay-300">
+            <p
+              className="tracking-[2px] text-2xl text-neutral-300 max-w-2xl mx-auto mb-8 leading-relaxed animate-fade-in delay-300"
+              style={{
+                fontFamily:
+                  "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
+              }}
+            >
               {userData.tagline}
             </p>
 
             {/* Enhanced Stats with Hover Effects */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12 max-w-2xl mx-auto">
+            <div className="flex flex-wrap justify-center items-center gap-6 mb-12 max-w-2xl mx-auto font-mono font-bold">
               <div className="text-center group cursor-pointer">
                 <div className="text-3xl font-black text-orange-400 mb-1 group-hover:scale-110 transition-transform duration-300">
                   {userData.stats.experience}
@@ -677,15 +815,22 @@ const skills = {
                 : "opacity-0 translate-y-10")
             }
           >
-           <div className="text-center mb-2">
-              <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6" style={{    fontFamily:
-                  "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",}}>
-                {"<>"} About{" "}
-                <span></span>
+            <div className="text-center mb-2">
+              <h2
+                className="text-4xl md:text-5xl font-extrabold text-white mb-6"
+                style={{
+                  fontFamily:
+                    "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
+                }}
+              >
+                {"<>"} About <span></span>
                 <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
                   Me {"</>"}
                 </span>
               </h2>
+              <p className="text-xl text-neutral-300 max-w-2xl mx-auto font-mono">
+                MERN Developer & Data Analyst solving real problems
+              </p>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -816,14 +961,19 @@ const skills = {
             }
           >
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" style={{    fontFamily:
-                  "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",}}>
+              <h2
+                className="text-4xl md:text-5xl font-bold text-white mb-6"
+                style={{
+                  fontFamily:
+                    "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
+                }}
+              >
                 {"<>"} My{" "}
                 <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
                   Skills {"</>"}
                 </span>
               </h2>
-              <p className="text-xl text-neutral-300 max-w-2xl mx-auto">
+              <p className="text-xl text-neutral-300 max-w-2xl mx-auto font-mono">
                 Technologies and tools I use to bring ideas to life
               </p>
             </div>
@@ -835,7 +985,7 @@ const skills = {
                   key={category.id}
                   onClick={() => setActiveSkillCategory(category.id)}
                   className={
-                    "flex items-center space-x-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 " +
+                    " flex gap-2 cursor-pointer px-3 sm:px-4 lg:px-5 border border-neutral-700 py-2 sm:py-2.5 lg:py-3 rounded-lg font-medium transition-all duration-300 text-sm sm:text-sm lg:text-base whitespace-nowrap hover:scale-105 transform " +
                     (activeSkillCategory === category.id
                       ? "cursor-pointer bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg"
                       : "cursor-pointer bg-neutral-900 border border-neutral-700 text-neutral-400 hover:border-orange-500 hover:text-orange-400")
@@ -856,18 +1006,36 @@ const skills = {
                 >
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-3">
-                 <div className=" border border-neutral-800 p-2 rounded-xl">
-                     <img src={skill.icon} alt={skill.name} className="w-6 h-6" />
-                 </div>
-                      <span className="text-white font-semibold">
+                      <div
+                        className={`${skill.bgColor} border border-neutral-800 p-2 rounded-xl`}
+                      >
+                        <img
+                          src={skill.icon}
+                          alt={skill.name}
+                          className="w-6 h-6"
+                        />
+                      </div>
+                      <span className="text-white font-semibold ">
                         {skill.name}
                       </span>
                     </div>
-                    <span className="text-orange-400 font-bold">
+                   
+                    <span className="text-orange-400  flex flex-col">
                       {skill.level}%
+                        <span className="text-sm text-white text-right right-0">
+                    {" "}
+                    {skill.level >= 90
+                      ? "Expert"
+                      : skill.level >= 70
+                      ? "Advanced"
+                      : "Intermediate"}
+                  </span>
                     </span>
                   </div>
+                  
+                 
                   <div className="w-full bg-neutral-800 rounded-full h-2">
+                    
                     <div
                       className="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full transition-all duration-1000 ease-out"
                       style={{ width: `${skill.level}%` }}

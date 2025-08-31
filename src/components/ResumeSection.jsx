@@ -76,9 +76,9 @@ const ResumeSection = () => {
         </div>
 
         {/* Contact Info */}
-        <div className="flex flex-col gap-4 mb-16 bg-white/5 backdrop-blur-sm p-4 sm:p-6 lg:p-8 border border-white/10 rounded-2xl w-full">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-16 bg-white/5 backdrop-blur-sm p-4 sm:p-6 lg:p-8 border border-white/10 rounded-2xl w-full">
           {/* Location */}
-          <div className="flex items-start sm:items-center gap-3 w-full">
+          <div className="flex items-start sm:items-center gap-3 w-full md:w-auto">
             <div className="p-2 bg-gradient-to-r from-orange-400 to-red-500 rounded-full flex-shrink-0">
               <MapPin size={16} className="text-white sm:w-[18px] sm:h-[18px]" />
             </div>
@@ -88,7 +88,7 @@ const ResumeSection = () => {
           </div>
 
           {/* Phone */}
-          <div className="flex items-center gap-3 w-full">
+          <div className="flex items-center gap-3 w-full md:w-auto">
             <div className="p-2 bg-gradient-to-r from-orange-400 to-red-500 rounded-full flex-shrink-0">
               <Phone size={16} className="text-white sm:w-[18px] sm:h-[18px]" />
             </div>
@@ -96,7 +96,7 @@ const ResumeSection = () => {
           </div>
 
           {/* Email */}
-          <div className="flex items-start sm:items-center gap-3 w-full">
+          <div className="flex items-start sm:items-center gap-3 w-full md:w-auto">
             <div className="p-2 bg-gradient-to-r from-orange-400 to-red-500 rounded-full flex-shrink-0">
               <Mail size={16} className="text-white sm:w-[18px] sm:h-[18px]" />
             </div>

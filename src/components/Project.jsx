@@ -31,7 +31,7 @@ export default function Project() {
         "Cloudinary",
         "Multer"
       ],
-      liveUrl: "https:/curiox.vercel.app",
+      liveUrl: "https://curiox.vercel.app",
       githubUrl: "https://github.com/Dipayan-Dey/Curiox-educational-platform",
       // featured: true,
       category: "Full Stack",

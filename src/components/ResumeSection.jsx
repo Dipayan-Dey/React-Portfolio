@@ -8,27 +8,12 @@ import {
   ExternalLink,
   Briefcase,
 } from "lucide-react";
-
+import CV from "../assets/My_Cv_.pdf";
 const ResumeSection = () => {
-  // const [currentText, setCurrentText] = useState("'Aspiring Data Analyst'");
-  // const [isTyping, setIsTyping] = useState(true);
-
-  // Simple typing animation
-  // useEffect(() => {
-  //   const texts = ["'Aspiring Data Analyst'", "'MERN Stack Developer'"];
-  //   let currentIndex = 0;
-    
-  //   const interval = setInterval(() => {
-  //     currentIndex = (currentIndex + 1) % texts.length;
-  //     setCurrentText(texts[currentIndex]);
-  //   }, 3000);
-
-  //   return () => clearInterval(interval);
-  // }, []);
-
   const handleDownloadCV = () => {
     // Simulated CV download - replace with actual CV file
-    console.log("CV download initiated");
+    // console.log("CV download initiated");
+    window.open(CV, "_blank");
   };
 
   const experience = [
@@ -55,10 +40,11 @@ const ResumeSection = () => {
       <div className="mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-7xl">
         {/* Header */}
         <div className="text-center mb-8">
-          <h2 
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent mb-4 pb-6" 
+          <h2
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent mb-4 pb-6"
             style={{
-              fontFamily: "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
+              fontFamily:
+                "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
             }}
           >
             {"<>"} <span className="text-white">My</span> Resume {"</>"}
@@ -80,7 +66,10 @@ const ResumeSection = () => {
           {/* Location */}
           <div className="flex items-start sm:items-center gap-3 w-full md:w-auto">
             <div className="p-2 bg-gradient-to-r from-orange-400 to-red-500 rounded-full flex-shrink-0">
-              <MapPin size={16} className="text-white sm:w-[18px] sm:h-[18px]" />
+              <MapPin
+                size={16}
+                className="text-white sm:w-[18px] sm:h-[18px]"
+              />
             </div>
             <span className="text-sm sm:text-base break-words leading-relaxed">
               Karakberia, Joypur, Bankura, West Bengal, 722154
@@ -134,10 +123,11 @@ const ResumeSection = () => {
                     <div className="font-mono text-xs sm:text-sm lg:text-base leading-relaxed min-w-fit">
                       {/* Line numbers and Code */}
                       <div className="flex">
-                        <div 
+                        <div
                           className="text-slate-500 select-none mr-4 sm:mr-6 text-right hidden sm:block flex-shrink-0"
                           style={{
-                            fontFamily: "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
+                            fontFamily:
+                              "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
                           }}
                         >
                           {Array.from({ length: 16 }, (_, i) => (
@@ -159,12 +149,15 @@ const ResumeSection = () => {
                           <div className="leading-6 sm:leading-7 ml-2 sm:ml-4">
                             <span className="text-slate-300">title:</span>{" "}
                             <span className="text-green-400">
-                               <ReactTyped
-                                        strings={ ["'Aspiring Data Analyst'","'MERN Stack Developer'" ]}
-                                        typeSpeed={80} // typing speed
-                                        backSpeed={70} // backspace speed
-                                        loop // infinite loop
-                                      />
+                              <ReactTyped
+                                strings={[
+                                  "'Aspiring Data Analyst'",
+                                  "'MERN Stack Developer'",
+                                ]}
+                                typeSpeed={80} // typing speed
+                                backSpeed={70} // backspace speed
+                                loop // infinite loop
+                              />
                             </span>
                             <span className="text-white">,</span>
                           </div>
@@ -191,7 +184,9 @@ const ResumeSection = () => {
                           </div>
 
                           <div className="leading-6 sm:leading-7 ml-4 sm:ml-8">
-                            <span className="text-slate-300">DataAnalysis:</span>{" "}
+                            <span className="text-slate-300">
+                              DataAnalysis:
+                            </span>{" "}
                             <span className="text-white">[</span>
                             <span className="text-green-400">'Python'</span>
                             <span className="text-white">,</span>{" "}
@@ -227,8 +222,9 @@ const ResumeSection = () => {
                             <span className="text-slate-300">about:</span>{" "}
                             <div className="text-green-400 break-words">
                               'Passionate Data Analyst and MERN Stack Developer
-                              dedicated to building scalable web applications and deriving actionable
-                              insights from data. Committed to learning, problem-solving, and
+                              dedicated to building scalable web applications
+                              and deriving actionable insights from data.
+                              Committed to learning, problem-solving, and
                               delivering real-world solutions.'
                             </div>
                           </div>
@@ -364,14 +360,16 @@ const ResumeSection = () => {
                     Data Analysis & Visualization
                   </h4>
                   <div className="flex flex-wrap gap-2">
-                    {["Pandas", "NumPy", "Matplotlib", "Seaborn"].map((skill) => (
-                      <span
-                        key={skill}
-                        className="px-2 sm:px-3 py-1 bg-gradient-to-r from-orange-400 to-red-500 text-white text-xs rounded-full"
-                      >
-                        {skill}
-                      </span>
-                    ))}
+                    {["Pandas", "NumPy", "Matplotlib", "Seaborn"].map(
+                      (skill) => (
+                        <span
+                          key={skill}
+                          className="px-2 sm:px-3 py-1 bg-gradient-to-r from-orange-400 to-red-500 text-white text-xs rounded-full"
+                        >
+                          {skill}
+                        </span>
+                      )
+                    )}
                   </div>
                 </div>
 
@@ -381,14 +379,16 @@ const ResumeSection = () => {
                     MERN Stack Development
                   </h4>
                   <div className="flex flex-wrap gap-2">
-                    {["MongoDB", "Express.js", "React.js", "Node.js"].map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-2 sm:px-3 py-1 bg-gradient-to-r from-orange-400 to-red-500 text-white text-xs rounded-full"
-                      >
-                        {tech}
-                      </span>
-                    ))}
+                    {["MongoDB", "Express.js", "React.js", "Node.js"].map(
+                      (tech) => (
+                        <span
+                          key={tech}
+                          className="px-2 sm:px-3 py-1 bg-gradient-to-r from-orange-400 to-red-500 text-white text-xs rounded-full"
+                        >
+                          {tech}
+                        </span>
+                      )
+                    )}
                   </div>
                 </div>
 

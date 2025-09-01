@@ -1,6 +1,7 @@
 import React from "react";
 import { FaInstagram, FaFacebookF, FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa";
 import { TbBrandFiverr } from "react-icons/tb";
+import { SiFiverr } from "react-icons/si";
 
 function Footer() {
   return (
@@ -21,7 +22,7 @@ function Footer() {
              className="hover:text-blue-400 transform hover:scale-110 transition duration-300">
             <FaLinkedinIn />
           </a>
-          <a href="https://www.fiverr.com/sellers/dipayandey2006/edit" target="_blank" rel="noreferrer" 
+          <a href="https://www.fiverr.com/dipayandey2006" target="_blank" rel="noreferrer" 
              className="hover:text-green-500 transform hover:scale-110 transition duration-300">
             <TbBrandFiverr />
           </a>

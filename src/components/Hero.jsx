@@ -73,7 +73,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import ResumeSection from "./ResumeSection";
-// import CodeIcon from '@mui/icons-material/Code';
+import { SiFiverr } from "react-icons/si";
 import { FaWhatsapp } from "react-icons/fa";
 
 import "../App.css";
@@ -106,7 +106,9 @@ import logo from "../assets/me.png";
 import RunningText from "./RunningText";
 import Footer from "./Footer";
 import Project from "./Project";
+import { TbBrandFiverr } from "react-icons/tb";
 export default function Hero() {
+
   const [isLoaded, setIsLoaded] = useState(false);
   const [activeProject, setActiveProject] = useState(0);
   const [activeSkillCategory, setActiveSkillCategory] = useState("programming");
@@ -174,7 +176,7 @@ export default function Hero() {
     location: "Kolkata , West Bengal",
     email: "deydipayan2006@gmail.com",
     phone: "+91 9239219193",
-    website: "https://dipayan-dey.github.io/dipayan-profile/",
+    website: "https://www.fiverr.com/dipayandey2006",
     resumeUrl: "/resume.pdf",
     avatar: logo,
 
@@ -190,7 +192,7 @@ export default function Hero() {
       github: "https://github.com/Dipayan-Dey",
       linkedin: "https://www.linkedin.com/in/dipayan-dey-033b38309/",
       twitter: "https://x.com/DipayanDey1711?t=jXzyq4QeQY_OtsrFp6jYvw&s=09",
-      website: "/",
+      website: "https://www.fiverr.com/dipayandey2006",
     },
 
     // Experience Stats
@@ -471,12 +473,7 @@ export default function Hero() {
     { id: "tools", name: "Tools & Platforms", icon: Wrench },
   ];
 
-  //   const getProficiencyLevel = (level) => {
-  //   if (level >= 90) return { label: "Expert", color: "text-green-700 bg-green-100" };
-  //   if (level >= 80) return { label: "Pro", color: "text-blue-700 bg-blue-100" };
-  //   return { label: "Intermediate", color: "text-yellow-700 bg-yellow-100" };
-  // };
-  // const proficiency=getProficiencyLevel(skills.lavel)
+ 
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden relative">
       {/* Advanced Animated Canvas Background */}
@@ -488,28 +485,12 @@ export default function Hero() {
 
       {/* Dynamic Background Layers */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-1">
-        {/* Animated Gradient Meshes */}
-        {/* <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-orange-500/5 via-transparent to-red-500/5 animate-pulse"></div>
-          <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-blue-500/5 via-transparent to-purple-500/5 animate-pulse delay-1000"></div>
-          <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-tr from-green-500/5 via-transparent to-cyan-500/5 animate-pulse delay-2000"></div>
-        </div> */}
-
-        {/* Large Moving Orbs */}
+       
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full blur-3xl animate-float"></div>
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-blue-500/15 to-purple-500/15 rounded-full blur-3xl animate-float-reverse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-green-500/10 to-cyan-500/10 rounded-full blur-3xl animate-float delay-2000"></div>
 
-        {/* Smaller Dynamic Orbs */}
-        {/* <div className="absolute top-10 right-20 w-32 h-32 bg-gradient-to-br from-orange-400/30 to-red-600/30 rounded-full blur-2xl animate-bounce-slow delay-500"></div>
-        <div className="absolute bottom-20 left-10 w-40 h-40 bg-gradient-to-br from-blue-400/25 to-purple-600/25 rounded-full blur-2xl animate-bounce-slow delay-1500"></div>
-        <div className="absolute top-1/3 right-1/3 w-24 h-24 bg-gradient-to-br from-green-400/20 to-cyan-600/20 rounded-full blur-xl animate-bounce-slow delay-3000"></div> */}
-
-        {/* Morphing Shapes */}
-        {/* <div className="absolute top-1/6 left-1/6 w-48 h-48 bg-gradient-conic from-orange-500/10 via-red-500/5 to-orange-500/10 rounded-full blur-2xl animate-spin-very-slow"></div>
-        <div className="absolute bottom-1/6 right-1/6 w-56 h-56 bg-gradient-conic from-blue-500/8 via-purple-500/4 to-blue-500/8 rounded-full blur-2xl animate-spin-very-slow-reverse"></div> */}
-
-        {/* Grid Pattern Overlay */}
+       
         <div
           className="absolute inset-0 opacity-5"
           style={{
@@ -532,23 +513,7 @@ export default function Hero() {
 
       {/* Enhanced Floating Elements */}
       <div className="fixed inset-0 pointer-events-none z-1">
-        {/* === Binary Rain Background === */}
-        {/* <div className="absolute inset-0 overflow-hidden -z-10">
-    {[...Array(50)].map((_, i) => (
-      <div
-        key={`binary-${i}`}
-        className="absolute text-green-400/15 font-mono text-xs animate-binary-rain select-none whitespace-pre"
-        style={{
-          left: `${(i * 2) % 100}%`,
-          animationDelay: `${i * 0.2}s`,
-          animationDuration: `${5 + (i % 4)}s`,
-          top: '-10%'
-        }}
-      >
-        {[...Array(25)].map(() => (Math.random() > 0.5 ? '1' : '0')).join('\n')}
-      </div>
-    ))}
-  </div> */}
+      
 
         {/* === Floating Code Symbols === */}
         <div className=" hidden md:block  absolute top-20 left-10 text-orange-400/30 text-4xl font-mono animate-float-code hover:scale-110 transition-transform">
@@ -641,7 +606,7 @@ export default function Hero() {
                   <img
                     src={userData.avatar || "/placeholder.svg"}
                     alt={userData.name}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain cursor-zoom-in"
                   />
                 </div>
               </div>
@@ -651,7 +616,7 @@ export default function Hero() {
                 <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
                   <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center space-x-2 shadow-lg hover:scale-105 transition-transform cursor-pointer">
                     <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                    <span>{userData.availabilityText}</span>
+                    <a href={userData.website} target="_blank"><span>{userData.availabilityText}</span></a>
                   </div>
                 </div>
               )}
@@ -770,16 +735,9 @@ export default function Hero() {
                 href={userData.resumeUrl}
                 download
                 className="group border-2 border-neutral-600 hover:border-orange-500 text-white px-4 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-xl font-bold text-sm sm:text-lg transition-all duration-300 flex items-center justify-center space-x-2 sm:space-x-3 hover:bg-gradient-to-r hover:from-orange-500/10 hover:to-red-500/10 relative w-full sm:w-auto max-w-xs sm:max-w-none"
-                onMouseEnter={(e) => {
-                  if (window.innerWidth >= 640) {
-                    e.target.style.transform = "scale(1.05) rotate(-1deg)";
-                  }
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.transform = "scale(1) rotate(0deg)";
-                }}
+               
               >
-                <Download className="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform duration-300 flex-shrink-0" />
+                <Download className="w-4 h-4 sm:w-5 sm:h-5  transition-transform duration-300 flex-shrink-0" />
                 <span className="whitespace-nowrap">Download Resume</span>
               </a>
             </div>
@@ -880,7 +838,7 @@ export default function Hero() {
                     href={userData.social.website}
                     className="w-12 h-12 bg-neutral-900 hover:bg-neutral-800 border border-neutral-700 hover:border-green-500 rounded-xl flex items-center justify-center text-neutral-400 hover:text-green-400 transition-all duration-300 hover:scale-110"
                   >
-                    <Globe className="w-6 h-6" />
+                    <TbBrandFiverr className="w-6 h-6" />
                   </a>
                 </div>
               </div>

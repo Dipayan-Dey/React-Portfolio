@@ -176,12 +176,7 @@ export default function Project() {
         }
       >
         <div className="text-center mb-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" style={
-            {
-                  fontFamily:
-                  "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
-            }
-          }>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-mono" >
             {"<>"} Featured{" "}
             <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
               Projects {"</>"}

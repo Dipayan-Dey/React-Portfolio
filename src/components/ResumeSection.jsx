@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ReactTyped } from "react-typed";
+// import { ExternalLink, ChevronDown } from "lucide-react";
+
 import {
   MapPin,
   Phone,
@@ -7,9 +9,15 @@ import {
   Download,
   ExternalLink,
   Briefcase,
+  ChevronDown,
 } from "lucide-react";
 import CV from "../assets/My_Cv_.pdf";
 const ResumeSection = () => {
+  const [openId, setOpenId] = useState(null);
+
+  const toggleDescription = (id) => {
+    setOpenId(openId === id ? null : id); // close if clicked again
+  };
   const handleDownloadCV = () => {
     // Simulated CV download - replace with actual CV file
     // console.log("CV download initiated");
@@ -33,6 +41,14 @@ const ResumeSection = () => {
       link: "https://www.linkedin.com/in/dipayan-dey-033b38309/overlay/1733253992652/single-media-viewer/?profileId=ACoAAE6n_ScB1Kpue_pGGXOyxZAt_hO8HTu_6rA",
       gridClass: "",
     },
+    {
+      id: 3,
+      title: "Tata Data Visualization Virtual Experience Program - Forage",
+      description:
+        "Successfully completed the Tata Data Visualization: Empowering Business with Effective Insights Virtual Experience Program on Forage. Gained hands-on experience in building dashboards with Power BI, analyzing revenue trends, customer behavior, and product demand to generate actionable business insights.",
+      link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/MyXvBcppsW2FkNYCX_ifobHAoMjQs9s6bKS_3Yb3ixNwaewzejcxB_1756836605782_completion_certificate.pdf",
+      gridClass: "",
+    },
   ];
 
   return (
@@ -41,11 +57,11 @@ const ResumeSection = () => {
         {/* Header */}
         <div className="text-center mb-8">
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent mb-4 pb-6"
-            style={{
-              fontFamily:
-                "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
-            }}
+            className="font-mono text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent mb-4 pb-6"
+            // style={{
+            //   fontFamily:
+            //     "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
+            // }}
           >
             {"<>"} <span className="text-white">My</span> Resume {"</>"}
           </h2>
@@ -257,6 +273,7 @@ const ResumeSection = () => {
 
             {/* Work Experience */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-white/10">
+              {/* Section Header */}
               <div className="flex items-center gap-3 mb-6 sm:mb-8">
                 <div className="text-xl sm:text-2xl">
                   <Briefcase />
@@ -266,26 +283,60 @@ const ResumeSection = () => {
                 </h3>
               </div>
 
-              <div className="grid gap-6 md:grid-cols-2">
+              {/* FAQ Style Accordion */}
+              <div className="space-y-4">
                 {experience.map((exp) => (
                   <div
                     key={exp.id}
-                    className={`bg-white/5 rounded-xl p-4 sm:p-6 border border-white/10 hover:border-orange-400/30 transition-all duration-300 group ${exp.gridClass}`}
+                    className={`rounded-xl border transition-all duration-300 overflow-hidden ${
+                      openId === exp.id
+                        ? "border-orange-400/60 bg-white/10 shadow-md"
+                        : "border-white/10 bg-white/5 hover:border-orange-400/30"
+                    }`}
                   >
-                    <h4 className="text-base sm:text-lg font-bold text-gray-800 dark:text-white mb-3 group-hover:text-orange-400 transition-colors leading-tight">
-                      {exp.title}
-                    </h4>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 leading-relaxed tracking-wide">
-                      {exp.description}
-                    </p>
-                    <a
-                      href={exp.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 transition-colors text-sm font-medium"
+                    {/* Title (clickable header) */}
+                    <button
+                      className="w-full flex items-center justify-between text-left p-4 sm:p-5 cursor-pointer hover:text-orange-500"
+                      onClick={
+                        () => setOpenId(openId === exp.id ? null : exp.id) // only one open at a time
+                      }
                     >
-                      Check Certificate <ExternalLink size={14} />
-                    </a>
+                      <h4 className="text-base sm:text-lg font-semibold  text-white group-hover:text-orange-400 transition-colors leading-tight">
+                        {exp.title}
+                      </h4>
+                      <ChevronDown
+                        size={20}
+                        className={`text-orange-400 transition-transform duration-300 ${
+                          openId === exp.id ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+
+                    {/* Description (accordion body) */}
+                    <div
+                      className={`grid transition-all duration-300 ${
+                        openId === exp.id
+                          ? "grid-rows-[1fr] opacity-100"
+                          : "grid-rows-[0fr] opacity-0"
+                      }`}
+                    >
+                      <div className="overflow-hidden">
+                        <p className="px-4 sm:px-5 pb-4 sm:pb-5 text-gray-600 dark:text-gray-300 text-sm leading-relaxed tracking-wide">
+                          {exp.description}
+                        </p>
+                        <div className="px-4 sm:px-5 pb-4">
+                          <a
+                            href={exp.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 transition-colors text-sm font-medium"
+                            onClick={(e) => e.stopPropagation()} // prevent toggle
+                          >
+                            Check Certificate <ExternalLink size={14} />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>

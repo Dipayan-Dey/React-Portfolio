@@ -624,10 +624,10 @@ export default function Hero() {
 
             {/* Enhanced Name & Title with Typewriter Effect */}
             <h1
-              className="text-6xl md:text-7xl lg:text-8xl italic leading-tight hover:scale-105 transition-transform duration-300 tracking-wider transform mb-4 "
+              className="text-6xl md:text-7xl lg:text-8xl italic leading-tight hover:scale-105 transition-transform duration-300 tracking-wider transform mb-4 font-mono "
               style={{
-                fontFamily:
-                  "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
+                // fontFamily:
+                //   "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
                 background:
                   "linear-gradient(135deg, #fbbf24 0%, #f59e0b 25%, #d97706 50%, #c2410c 75%, #9a3412 100%)",
                 WebkitBackgroundClip: "text",
@@ -664,11 +664,8 @@ export default function Hero() {
             </div>
 
             <p
-              className="tracking-[2px] text-2xl text-neutral-300 max-w-2xl mx-auto mb-8 leading-relaxed animate-fade-in delay-300"
-              style={{
-                fontFamily:
-                  "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
-              }}
+              className="tracking-[2px] text-2xl text-neutral-300 max-w-2xl mx-auto mb-8 leading-relaxed animate-fade-in delay-300 font-mono"
+              
             >
               {userData.tagline}
             </p>
@@ -772,11 +769,11 @@ export default function Hero() {
           >
             <div className="text-center mb-2">
               <h2
-                className="text-4xl md:text-5xl font-extrabold text-white mb-6"
-                style={{
-                  fontFamily:
-                    "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
-                }}
+                className="text-4xl md:text-5xl font-extrabold text-white mb-6 font-mono"
+                // style={{
+                //   fontFamily:
+                //     "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
+                // }}
               >
                 {"<>"} About <span></span>
                 <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
@@ -917,11 +914,11 @@ export default function Hero() {
           >
             <div className="text-center mb-16">
               <h2
-                className="text-4xl md:text-5xl font-bold text-white mb-6"
-                style={{
-                  fontFamily:
-                    "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
-                }}
+                className="text-4xl md:text-5xl font-bold text-white mb-6 font-mono"
+                // style={{
+                //   fontFamily:
+                //     "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
+                // }}
               >
                 {"<>"} My{" "}
                 <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">

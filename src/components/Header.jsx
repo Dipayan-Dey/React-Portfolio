@@ -40,24 +40,17 @@ const navLinks = [
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo - Hidden on mobile, visible on desktop */}
-          <div className="text-3xl lg:text-4xl font-bold  lg:block">
-          <h1 className='text-white font-bold ' style={{
-             fontFamily:
-                  "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
-          }}><span className='bg-gradient-to-r from-orange-700 to-red-500 bg-clip-text text-transparent'>{"<>"} Mr.</span> Dipayan {"</>"}</h1>
+          <div className="text-2xl lg:text-3xl font-bold  lg:block">
+          <h1 className='text-white font-bold font-mono'><span className='bg-gradient-to-r from-orange-700 to-red-500 bg-clip-text text-transparent'>{"<>"} Mr.</span> Dipayan {"</>"}</h1>
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex space-x-8 tracking-[2px]" style={{
-             fontFamily:
-                  "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
-                  
-          }}>
+          <div className="hidden lg:flex space-x-8 tracking-[1px] font-mono" >
             {navLinks.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className=" text-white font-semibold relative hover:text-orange-500 transition-all duration-300 group py-2"
+                className=" text-white font-thin relative hover:text-orange-500 transition-all duration-300 group py-2"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-500 to-red-600 group-hover:w-full transition-all duration-300"></span>
@@ -117,10 +110,7 @@ const navLinks = [
                 isMenuOpen ? "scale-100 rotate-0" : "scale-75 rotate-12"
               }`} style={{ transitionDelay: isMenuOpen ? '0.4s' : '0s' }}>
                 {/* <Logo /> */}
-                    <h1 className='text-white font-bold text-2xl' style={{
-             fontFamily:
-                  "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
-          }}><span className='bg-gradient-to-r from-orange-700 to-red-500 bg-clip-text text-transparent'>{"<>"} Mr.</span> Dipayan {"</>"}</h1>
+                    <h1 className='text-white font-bold text-2xl font-mono' ><span className='bg-gradient-to-r from-orange-700 to-red-500 bg-clip-text text-transparent'>{"<>"} Mr.</span> Dipayan {"</>"}</h1>
               </div>
             </div>
 
@@ -144,10 +134,7 @@ const navLinks = [
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <div className="relative py-4 px-6 rounded-xl transition-all duration-400 border border-transparent  transform hover:scale-105 text-white hover:text-orange-500" >
-                      <span className="tracking-[4px] text-2xl font-medium text-white hover:text-orange-500  transition-all duration-300 relative z-10 block" style={{
-             fontFamily:
-                  "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",
-          }}>
+                      <span className="tracking-[2px] text-2xl font-medium text-white hover:text-orange-500  transition-all duration-300 relative z-10 block font-mono" >
                         {item.label}
                       </span>
                       

@@ -624,7 +624,7 @@ export default function Hero() {
 
             {/* Enhanced Name & Title with Typewriter Effect */}
             <h1
-              className="text-6xl md:text-7xl lg:text-8xl italic leading-tight hover:scale-105 transition-transform duration-300 tracking-wider transform mb-4 font-mono "
+              className="text-5xl md:text-7xl lg:text-8xl italic leading-tight hover:scale-105 transition-transform duration-300 tracking-wider transform mb-4 font-mono "
               style={{
                 // fontFamily:
                 //   "'Brush Script MT', 'Dancing Script', 'Lucida Handwriting', cursive",

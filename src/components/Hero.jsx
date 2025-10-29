@@ -280,6 +280,12 @@ export default function Hero() {
         bgColor: "bg-yellow-100", // JavaScript yellow
       },
       {
+        name: "TypeScript",
+        level: 92,
+        icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/768px-Typescript_logo_2020.svg.png?20221110153201",
+        bgColor: "bg-blue-100", // JavaScript yellow
+      },
+      {
         name: "C++",
         level: 20,
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
@@ -302,6 +308,12 @@ export default function Hero() {
         level: 85,
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
         bgColor: "bg-blue-100", // C blue
+      },
+      {
+        name: "Dart",
+        level: 85,
+        icon: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Dart-logo.png?20140316083713",
+        bgColor: "bg-green-100", // C blue
       },
     ],
 

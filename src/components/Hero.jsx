@@ -319,10 +319,16 @@ export default function Hero() {
 
     frontend: [
       {
-        name: "React",
+        name: "React Js",
         level: 95,
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
         bgColor: "bg-cyan-100", // React cyan
+      },
+      {
+        name: "Next Js",
+        level: 30,
+        icon: "https://marcbruederlin.gallerycdn.vsassets.io/extensions/marcbruederlin/next-icons/0.1.0/1723747598319/Microsoft.VisualStudio.Services.Icons.Default",
+        bgColor: "bg-gray-100", // Next gray
       },
       {
         name: "Tailwind CSS",

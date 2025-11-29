@@ -41,7 +41,7 @@ function Footer() {
 
         {/* Footer Text */}
         <p className="text-sm text-gray-400">
-          © {new Date().getFullYear()} Dipayan Dey | All Rights Reserved
+          © 2023 - {new Date().getFullYear()} Dipayan Dey | All Rights Reserved
         </p>
         <p className="text-xs text-gray-500">
           Made with ❤️ by <span className="text-white">Dipayan Dey</span>

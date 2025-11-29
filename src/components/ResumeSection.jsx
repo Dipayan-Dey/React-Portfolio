@@ -35,6 +35,14 @@ const ResumeSection = () => {
     },
     {
       id: 2,
+      title: "Frontend Developer Intern - Aeonix Research and Innovations",
+      description:
+        "Completed a Frontend Developer Internship at Aeonix Research and Innovations, where I contributed to building user-friendly web interfaces using HTML, CSS, and JavaScript. Collaborated with the design team to implement responsive designs and enhance website performance.",
+      link: "/",
+      gridClass: "",
+    },
+    {
+      id: 3,
       title: "Java Developer Intern - Easy2Learning Pvt Ltd",
       description:
         "Worked as a Java Developer Intern at Easy2Learning Pvt Ltd, where I gained practical experience in core Java and object-oriented programming concepts. Built and debugged Java applications, implemented features using OOP principles, and worked with exception handling, multithreading, and file handling to strengthen backend development skills.",
@@ -42,11 +50,19 @@ const ResumeSection = () => {
       gridClass: "",
     },
     {
-      id: 3,
+      id: 4,
       title: "Tata Data Visualization Virtual Experience Program - Forage",
       description:
         "Successfully completed the Tata Data Visualization: Empowering Business with Effective Insights Virtual Experience Program on Forage. Gained hands-on experience in building dashboards with Power BI, analyzing revenue trends, customer behavior, and product demand to generate actionable business insights.",
       link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/MyXvBcppsW2FkNYCX_ifobHAoMjQs9s6bKS_3Yb3ixNwaewzejcxB_1756836605782_completion_certificate.pdf",
+      gridClass: "",
+    },
+    {
+      id: 5,
+      title: "Data Analytics Intership - Intelverse Academy",
+      description:
+        "Completed a Data Analytics Internship at Intelverse Academy, where I developed skills in data cleaning, analysis, and visualization using Python libraries such as Pandas, NumPy, Matplotlib, and Seaborn. Worked on real-world datasets to extract insights and present findings effectively. And my project was All india crime data analysis and visualization. ",
+      link: "https://drive.google.com/file/d/1t0E-LZlhvFFezXH30fy4lerpDN5UnEdW/view",
       gridClass: "",
     },
   ];
@@ -88,7 +104,7 @@ const ResumeSection = () => {
               />
             </div>
             <span className="text-sm sm:text-base break-words leading-relaxed">
-              Karakberia, Joypur, Bankura, West Bengal, 722154
+               Joypur, Bankura, West Bengal, 722154
             </span>
           </div>
 
@@ -97,7 +113,7 @@ const ResumeSection = () => {
             <div className="p-2 bg-gradient-to-r from-orange-400 to-red-500 rounded-full flex-shrink-0">
               <Phone size={16} className="text-white sm:w-[18px] sm:h-[18px]" />
             </div>
-            <span className="text-sm sm:text-base">8389806944</span>
+            <span className="text-sm sm:text-base">9239219193</span>
           </div>
 
           {/* Email */}
@@ -106,7 +122,7 @@ const ResumeSection = () => {
               <Mail size={16} className="text-white sm:w-[18px] sm:h-[18px]" />
             </div>
             <span className="text-sm sm:text-base break-all">
-              dipayandey49@gmail.com
+              deydipayan2006@gmail.com
             </span>
           </div>
         </div>
@@ -359,8 +375,9 @@ const ResumeSection = () => {
                 <div className="absolute left-[-4px] top-2 w-2 h-2 bg-orange-400 rounded-full"></div>
 
                 <div>
-                  <div className="text-orange-400 font-semibold text-xs sm:text-sm mb-2">
-                    2023 - {new Date().getFullYear()}
+                  <div className="text-orange-400 font-semibold text-xs sm:text-sm mb-2 flex items-center gap-2">
+                    2023 - 
+                    <p>Present</p>
                   </div>
                   <h4 className="font-bold text-gray-800 dark:text-white mb-1 text-sm sm:text-base leading-tight">
                     Diploma in Computer Science & Technology
@@ -369,7 +386,7 @@ const ResumeSection = () => {
                     Uluberia Government Polytechnic College
                   </div>
                   <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm leading-relaxed">
-                    Achieved 79% marks. Specialized in software engineering and
+                    Achieved 80% marks. Specialized in software engineering and
                     core studies in programming fundamentals, data structures,
                     algorithms, and web development. Participated in multiple
                     hackathons and coding competitions.
@@ -394,7 +411,7 @@ const ResumeSection = () => {
                     Programming Languages
                   </h4>
                   <div className="flex flex-wrap gap-2">
-                    {["Python", "JavaScript", "Java"].map((lang) => (
+                    {["Python", "JavaScript", "Java" ,"C"].map((lang) => (
                       <span
                         key={lang}
                         className="px-2 sm:px-3 py-1 bg-gradient-to-r from-orange-400 to-red-500 text-white text-xs rounded-full"
@@ -411,7 +428,7 @@ const ResumeSection = () => {
                     Data Analysis & Visualization
                   </h4>
                   <div className="flex flex-wrap gap-2">
-                    {["Pandas", "NumPy", "Matplotlib", "Seaborn"].map(
+                    {["Pandas", "NumPy", "Matplotlib", "Seaborn","Power BI"].map(
                       (skill) => (
                         <span
                           key={skill}
@@ -427,10 +444,10 @@ const ResumeSection = () => {
                 {/* MERN Stack Development */}
                 <div>
                   <h4 className="font-semibold text-gray-800 dark:text-white mb-2 sm:mb-3 text-xs sm:text-sm">
-                    MERN Stack Development
+                    Full Stack Development
                   </h4>
                   <div className="flex flex-wrap gap-2">
-                    {["MongoDB", "Express.js", "React.js", "Node.js"].map(
+                    {["MongoDB", "Express.js", "React.js", "Node.js","FastAPI"].map(
                       (tech) => (
                         <span
                           key={tech}
@@ -457,6 +474,8 @@ const ResumeSection = () => {
                       "VS Code",
                       "Postman",
                       "Figma",
+                      "Docker",
+                      "AWS"
                     ].map((tool) => (
                       <span
                         key={tool}

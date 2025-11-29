@@ -6,6 +6,9 @@ import music from "../assets/ProjectImage/Frontend/music.png";
 import ride from "../assets/ProjectImage/Frontend/ride.png";
 import todo from "../assets/ProjectImage/Frontend/todo.png";
 import vcAssist from "../assets/ProjectImage/Frontend/vcAssist.png";
+import portfolio from "../assets/ProjectImage/Frontend/Portfolio.png";
+import cafeImg from "../assets/ProjectImage/FullStack/cafe.png";
+import NutriScan from "../assets/ProjectImage/FullStack/nutriscanai.png";
 export default function Project() {
   //  const ViewProjects =()=>{
   //   alert(`
@@ -38,13 +41,37 @@ export default function Project() {
     },
     {
       id: 2,
-      title: "TaskFlow – Task Management App",
+      title: "TaskFlow – Task Management Platform",
       description:
         "TaskFlow is a MERN stack-based task management application that enables teams to collaborate efficiently with real-time updates, task tracking, and seamless project organization.",
       image: taskflow, // your imported image
       technologies: ["MongoDB", "Express.js", "React.js", "Node.js"],
       liveUrl: "https://dipayan-task-flow.vercel.app/", // replace with your deployed link
       githubUrl: "https://github.com/Dipayan-Dey/Mern-Stack-TaskFlow", // replace with your repo link
+      // featured: true,
+      category: "Full Stack",
+    },
+    {
+      id: 3,
+      title: "Cafe Management System",
+      description:
+        "Cafe Management System is a comprehensive MERN stack application designed to streamline cafe operations. It features menu management, order processing, and customer management for efficient service.",
+      image: cafeImg, // your imported image
+      technologies: ["MongoDB", "Express.js", "React.js", "Node.js"],
+      liveUrl: "https://cafe-management-system-puce.vercel.app/", // replace with your deployed link
+      githubUrl: "https://github.com/Dipayan-Dey/cafe-management-system", // replace with your repo link
+      // featured: true,
+      category: "Full Stack",
+    },
+    {
+      id: 4,
+      title: "NutriScan AI – Diet Analysis Platform",
+      description:
+        "NutriScan AI is an innovative diet analysis application that leverages AI to provide personalized nutrition insights. Users can scan food items to receive detailed nutritional information and dietary recommendations. Built with cutting-edge AI technologies, NutriScan AI aims to promote healthier eating habits through data-driven insights.",
+      image: NutriScan, // your imported image
+      technologies: ["MongoDB", "FastAPI", "React.js", "Tailwind CSS"," Python", "Llama2"],
+      liveUrl: "https://nutriscanhq.vercel.app/", // replace with your deployed link
+      githubUrl: "https://github.com/Dipayan-Dey/NutriScan-AI", // replace with your repo link
       // featured: true,
       category: "Full Stack",
     },
@@ -84,7 +111,19 @@ export default function Project() {
   githubUrl: "https://github.com/Dipayan-Dey/virtual-ai-assistant", // replace with your repo link
   // featured: false,
   category: "Frontend",
-}
+},
+{
+  id: 6,
+  title: "Portfolio Website",
+  description:
+    "A personal portfolio website built with React.js and Tailwind CSS to showcase projects, skills, and experience. It features a clean design, responsive layout, and smooth navigation for an engaging user experience. ",
+  image: portfolio, // your imported image
+  technologies: ["React.js", "Tailwind CSS"],
+  liveUrl: "https://www.dipayandey.site", // replace with your deployed link
+  githubUrl: "https://github.com/Dipayan-Dey/React-Portfolio", // replace with your repo link
+  // featured: false,
+  category: "Frontend",
+},
 ,
 {
   id: 6,

@@ -107,6 +107,7 @@ import RunningText from "./RunningText";
 import Footer from "./Footer";
 import Project from "./Project";
 import { TbBrandFiverr } from "react-icons/tb";
+import resume from "../assets/My_Cv_.pdf"
 export default function Hero() {
 
   const [isLoaded, setIsLoaded] = useState(false);
@@ -177,7 +178,7 @@ export default function Hero() {
     email: "deydipayan2006@gmail.com",
     phone: "+91 9239219193",
     website: "https://www.fiverr.com/dipayandey2006",
-    resumeUrl: "/resume.pdf",
+    resumeUrl:resume,
     avatar: logo,
 
     // Availability
@@ -369,6 +370,12 @@ export default function Hero() {
         icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ8pLM2nPCg_c9kGRQfWQgWHgm3sZbwPSsFg&s",
         bgColor: "bg-indigo-100", // REST APIs indigo
       },
+        {
+        name: "FastAPI",
+        level: 70,
+        icon: "https://res.cloudinary.com/dlsuycdfj/image/upload/v1764442323/FastAPI_ndxpxs.png",
+        bgColor: "bg-green-200", // REST APIs indigo
+      }
     ],
 
     database: [
@@ -467,6 +474,12 @@ export default function Hero() {
         level: 75,
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
         bgColor: "bg-blue-100", // Docker blue
+      },
+      {
+        name: "AWS",
+        level: 60,
+        icon: "https://res.cloudinary.com/dlsuycdfj/image/upload/v1764442323/AWS_bpklly.png",
+        bgColor: "bg-orange-200", // AWS blue
       },
     ],
   };

@@ -24,48 +24,65 @@ const ResumeSection = () => {
     window.open(CV, "_blank");
   };
 
-  const experience = [
-    {
-      id: 1,
-      title: "Web Developer Intern - CodeClause",
-      description:
-        "Successfully completed a web development internship at CodeClause, where I built and optimized responsive web applications. Gained hands-on experience with HTML, CSS, JavaScript, and React while working on real-world projects to improve functionality and user experience.",
-      link: "https://www.linkedin.com/in/dipayan-dey-033b38309/overlay/experience/2714249463/multiple-media-viewer/?profileId=ACoAAE6n_ScB1Kpue_pGGXOyxZAt_hO8HTu_6rA&treasuryMediaId=1756484777776",
-      gridClass: "",
-    },
-    {
-      id: 2,
-      title: "Frontend Developer Intern - Aeonix Research and Innovations",
-      description:
-        "Completed a Frontend Developer Internship at Aeonix Research and Innovations, where I contributed to building user-friendly web interfaces using HTML, CSS, and JavaScript. Collaborated with the design team to implement responsive designs and enhance website performance.",
-      link: "/",
-      gridClass: "",
-    },
-    {
-      id: 3,
-      title: "Java Developer Intern - Easy2Learning Pvt Ltd",
-      description:
-        "Worked as a Java Developer Intern at Easy2Learning Pvt Ltd, where I gained practical experience in core Java and object-oriented programming concepts. Built and debugged Java applications, implemented features using OOP principles, and worked with exception handling, multithreading, and file handling to strengthen backend development skills.",
-      link: "https://www.linkedin.com/in/dipayan-dey-033b38309/overlay/1733253992652/single-media-viewer/?profileId=ACoAAE6n_ScB1Kpue_pGGXOyxZAt_hO8HTu_6rA",
-      gridClass: "",
-    },
-    {
-      id: 4,
-      title: "Tata Data Visualization Virtual Experience Program - Forage",
-      description:
-        "Successfully completed the Tata Data Visualization: Empowering Business with Effective Insights Virtual Experience Program on Forage. Gained hands-on experience in building dashboards with Power BI, analyzing revenue trends, customer behavior, and product demand to generate actionable business insights.",
-      link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/MyXvBcppsW2FkNYCX_ifobHAoMjQs9s6bKS_3Yb3ixNwaewzejcxB_1756836605782_completion_certificate.pdf",
-      gridClass: "",
-    },
-    {
-      id: 5,
-      title: "Data Analytics Intership - Intelverse Academy",
-      description:
-        "Completed a Data Analytics Internship at Intelverse Academy, where I developed skills in data cleaning, analysis, and visualization using Python libraries such as Pandas, NumPy, Matplotlib, and Seaborn. Worked on real-world datasets to extract insights and present findings effectively. And my project was All india crime data analysis and visualization. ",
-      link: "https://drive.google.com/file/d/1t0E-LZlhvFFezXH30fy4lerpDN5UnEdW/view",
-      gridClass: "",
-    },
-  ];
+ const experience = [
+  {
+    id: 1,
+    title: "Web Developer Intern - CodeClause",
+    description:
+      "Successfully completed a web development internship at CodeClause, where I built and optimized responsive web applications. Gained hands-on experience with HTML, CSS, JavaScript, and React while working on real-world projects to improve functionality and user experience.",
+    link: "https://www.linkedin.com/in/dipayan-dey-033b38309/overlay/experience/2714249463/multiple-media-viewer/?profileId=ACoAAE6n_ScB1Kpue_pGGXOyxZAt_hO8HTu_6rA&treasuryMediaId=1756484777776",
+    gridClass: "",
+  },
+  {
+    id: 2,
+    title: "Frontend Developer Intern - Aeonix Research and Innovations",
+    description:
+      "Completed a Frontend Developer Internship at Aeonix Research and Innovations, where I contributed to building user-friendly web interfaces using HTML, CSS, and JavaScript. Collaborated with the design team to implement responsive designs and enhance website performance.",
+    link: "/",
+    gridClass: "",
+  },
+  {
+    id: 3,
+    title: "Java Developer Intern - Easy2Learning Pvt Ltd",
+    description:
+      "Worked as a Java Developer Intern at Easy2Learning Pvt Ltd, where I gained practical experience in core Java and object-oriented programming concepts. Built and debugged Java applications, implemented features using OOP principles, and worked with exception handling, multithreading, and file handling to strengthen backend development skills.",
+    link: "https://www.linkedin.com/in/dipayan-dey-033b38309/overlay/1733253992652/single-media-viewer/?profileId=ACoAAE6n_ScB1Kpue_pGGXOyxZAt_hO8HTu_6rA",
+    gridClass: "",
+  },
+  {
+    id: 4,
+    title: "Tata Data Visualization Virtual Experience Program - Forage",
+    description:
+      "Successfully completed the Tata Data Visualization: Empowering Business with Effective Insights Virtual Experience Program on Forage. Gained hands-on experience in building dashboards with Power BI, analyzing revenue trends, customer behavior, and product demand to generate actionable business insights.",
+    link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/MyXvBcppsW2FkNYCX_ifobHAoMjQs9s6bKS_3Yb3ixNwaewzejcxB_1756836605782_completion_certificate.pdf",
+    gridClass: "",
+  },
+  {
+    id: 5,
+    title: "Data Analytics Internship - Intelverse Academy",
+    description:
+      "Completed a Data Analytics Internship at Intelverse Academy, where I developed skills in data cleaning, analysis, and visualization using Python libraries such as Pandas, NumPy, Matplotlib, and Seaborn. Worked on real-world datasets to extract insights and present findings effectively, including an All India Crime Data Analysis and Visualization project.",
+    link: "https://drive.google.com/file/d/1t0E-LZlhvFFezXH30fy4lerpDN5UnEdW/view",
+    gridClass: "",
+  },
+  {
+    id: 6,
+    title: "Solutions Architecture Job Simulation - AWS (Forage)",
+    description:
+      "Completed the AWS Solutions Architecture Job Simulation on Forage, where I designed a simple, scalable, and cost-effective hosting architecture. Gained hands-on experience with AWS services such as Elastic Beanstalk, EC2 Auto Scaling, Elastic Load Balancing, RDS, S3, Route 53, and CI/CD pipelines, focusing on availability, scalability, and cost optimization.",
+    link: "https://www.theforage.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_3Yb3ixNwaewzejcxB_1767605494955_completion_certificate.pdf",
+    gridClass: "",
+  },
+  {
+    id: 7,
+    title: "Power BI Workshop - OfficeMaster",
+    description:
+      "Successfully completed a Power BI Workshop by OfficeMaster, gaining hands-on experience in creating AI-powered interactive dashboards, data modeling, basic DAX calculations, and transforming raw datasets into meaningful business insights within a short development time.",
+    link: "https://certx.in/certificate/36a28147-6eed-47a5-8342-e5f926ebba61914434",
+    gridClass: "",
+  },
+];
+
 
   return (
     <section id="resume" className="bg-transparent mt-10">
@@ -295,7 +312,7 @@ const ResumeSection = () => {
                   <Briefcase />
                 </div>
                 <h3 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
-                  Work Experience
+                  Certifications
                 </h3>
               </div>
 

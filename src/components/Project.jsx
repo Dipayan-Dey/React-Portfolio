@@ -263,25 +263,25 @@ export default function Project() {
 
       {/* View All Projects Section */}
       <div className="text-center relative mb-5">
-        <button
-          onClick={() => setShow(prev => !prev)}
+        <a href="https://github.com/Dipayan-Dey" terget="_blank" 
+          // onClick={() => setShow(prev => !prev)}
           // onMouseLeave={()=>setShow(prev => !prev)}
           className="cursor-pointer group inline-flex items-center space-x-2 bg-neutral-900 hover:bg-neutral-800 border border-neutral-700 hover:border-orange-500 text-neutral-300 hover:text-orange-400 px-4 sm:px-6 lg:px-8 py-3 sm:py-3.5 lg:py-4 rounded-xl font-semibold transition-all duration-300 text-sm sm:text-base hover:scale-105 transform"
         >
           <span>View All Projects</span>
           <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" />
-        </button>
+        </a>
 
         {/* Overlay Modal */}
-        <div
+        {/* <div
           className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-neutral-900 border border-neutral-700 rounded-xl shadow-2xl p-4 sm:p-6 w-72 sm:w-80 lg:w-96 transition-all duration-300 z-50 ${
             show
               ? 'opacity-100 translate-y-0 visible'
               : 'opacity-0 -translate-y-2 invisible'
           }`}
-        >
+        > */}
           {/* Modal Header */}
-          <div className="flex justify-between items-center mb-4 sm:mb-6">
+          {/* <div className="flex justify-between items-center mb-4 sm:mb-6">
             <h2 className="text-lg sm:text-xl font-semibold text-white">View Projects</h2>
             <button
               onClick={() => setShow(false)}
@@ -289,10 +289,10 @@ export default function Project() {
             >
               <X className="w-5 h-5" />
             </button>
-          </div>
+          </div> */}
           
           {/* Modal Content */}
-          <div className="flex flex-col gap-3 sm:gap-4">
+          {/* <div className="flex flex-col gap-3 sm:gap-4">
             <a
               href="https://github.com/Dipayan-Dey"
               target="_blank"
@@ -313,15 +313,15 @@ export default function Project() {
               <span className="font-medium text-sm sm:text-base">Data Analysis</span>
             </a>
           </div>
-        </div>
+        </div> */}
 
         {/* Click outside to close modal */}
-        {show && (
+        {/* {show && (
           <div 
             // className="fixed inset-0 z-40 bg-black bg-opacity-20 lg:bg-transparent" 
             // onClick={() => setShow(false)}
           />
-        )}
+        )} */}
       </div>
     </div>
 
